@@ -1,16 +1,37 @@
-// Загружаем gulpfile для регистрации задач
-import './gulpfile.js';
-
 // Импортируем gulp
 import gulp from 'gulp';
 
-// Получаем задачу build и запускаем её
-const buildTask = gulp.task('build');
+// Импортируем пути
+import { path } from './gulp/config/path.js';
+import { distFolder } from './gulp/config/path.js';
+import { srcFolder } from './gulp/config/path.js';
 
-if (!buildTask) {
-  console.error('Build task not found');
-  process.exit(1);
-}
+// Передача значений в глобальную переменную
+global.app = {
+  path: path,
+  gulp: gulp,
+  distFolder: distFolder,
+  srcFolder: srcFolder,
+};
+
+// Импортируем задачи напрямую
+import { html } from './gulp/tasks/html.js';
+import { clean } from './gulp/tasks/clean.js';
+import { styles } from './gulp/tasks/styles.js';
+import { buildCss } from './gulp/tasks/styles.js';
+import { scripts } from './gulp/tasks/scripts.js';
+import { img } from './gulp/tasks/img.js';
+import { cleanFonts } from './gulp/tasks/clean.js';
+import { otfConvert } from './gulp/tasks/fonts.js';
+import { ttfConvert } from './gulp/tasks/fonts.js';
+import { exportFonts } from './gulp/tasks/fonts.js';
+import { webpRun } from './gulp/tasks/webp.js';
+
+// Создаем задачу build напрямую
+const buildTask = gulp.series(
+  clean,
+  gulp.parallel(html, styles, buildCss, scripts, img, webpRun, cleanFonts, otfConvert, ttfConvert, exportFonts)
+);
 
 // Запускаем задачу
 const result = buildTask();
@@ -41,7 +62,6 @@ if (result) {
       }
     });
   } else {
-    // Синхронная задача
     console.log('✓ Build task executed');
   }
 } else {
