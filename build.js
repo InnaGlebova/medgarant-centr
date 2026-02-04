@@ -27,44 +27,45 @@ import { ttfConvert } from './gulp/tasks/fonts.js';
 import { exportFonts } from './gulp/tasks/fonts.js';
 import { webpRun } from './gulp/tasks/webp.js';
 
-// Создаем задачу build напрямую
-const buildTask = gulp.series(
+// Создаем задачу build напрямую и регистрируем её
+gulp.task('build', gulp.series(
   clean,
   gulp.parallel(html, styles, buildCss, scripts, img, webpRun, cleanFonts, otfConvert, ttfConvert, exportFonts)
-);
+));
 
-// Запускаем задачу
-const result = buildTask();
+// Получаем зарегистрированную задачу и запускаем её
+const buildTask = gulp.task('build');
 
-// Обрабатываем результат
-if (result) {
-  if (typeof result.then === 'function') {
-    // Promise - ждем завершения
-    result
-      .then(() => {
-        console.log('✓ Build completed successfully');
-      })
-      .catch((err) => {
-        console.error('✗ Build failed:', err);
-        process.exit(1);
-      });
-  } else if (result && typeof result.on === 'function') {
-    // Stream - обрабатываем события
-    let hasError = false;
-    result.on('error', (err) => {
-      hasError = true;
-      console.error('✗ Build failed:', err);
-      process.exit(1);
-    });
-    result.on('end', () => {
-      if (!hasError) {
-        console.log('✓ Build completed successfully');
-      }
-    });
-  } else {
-    console.log('✓ Build task executed');
-  }
-} else {
-  console.error('✗ Build task returned no result');
+if (!buildTask) {
+  console.error('✗ Build task not found');
   process.exit(1);
 }
+
+// Вызываем задачу и обрабатываем результат как Promise
+Promise.resolve()
+  .then(() => {
+    const result = buildTask();
+    return result;
+  })
+  .then((result) => {
+    // Если результат - Promise, ждем его
+    if (result && typeof result.then === 'function') {
+      return result;
+    }
+    // Если результат - Stream, конвертируем в Promise
+    if (result && typeof result.on === 'function') {
+      return new Promise((resolve, reject) => {
+        result.on('end', resolve);
+        result.on('error', reject);
+      });
+    }
+    // Если результат undefined или другой тип, считаем успешным
+    return Promise.resolve();
+  })
+  .then(() => {
+    console.log('✓ Build completed successfully');
+  })
+  .catch((err) => {
+    console.error('✗ Build failed:', err);
+    process.exit(1);
+  });
