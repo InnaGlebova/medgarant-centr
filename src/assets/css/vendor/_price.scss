@@ -1,180 +1,199 @@
-/*  price */
-
-
+/* price */
+.price {
+  background-color: $primary-background-light;
+}
 .price__title {
-    margin-bottom: 24px;
+  margin-bottom: 60px;
+  text-align: start;
 }
 
-.price__inner {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+.price__badge {
+  text-align: start;
 }
-
-.tabs__buttons {
-    width: 100%;
-    display: flex;
-    gap: 10px;
-}
-
-.tab {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 16px;
-    background-color: transparent;
-    border: 1px solid $primary;
-    color: $primary;
-    border-radius: 10px;
-    text-align: center;
-    white-space: nowrap;
-
-    &.active {
-        background-color: $primary;
-        color: #fff;
-    }
-
-    @media (hover:hover) {
-        &:hover {
-            background-color: $primary;
-            color: #fff;
-        }
-    }
-
-}
-
-.price__contents {
-    width: 100%;
-}
-
-.tab-content {
-    display: none;
-
-    &.active {
-        display: flex;
-    }
+.price__content {
+  color: $primary-text;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .price__table {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  & > tbody > tr {
+    display: flex;
     width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid $stroke-primary;
 
-    & table {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        & thead {
-            background-color: $stroke-secondary;
-            color: #fff;
-            border-radius: 12px;
-
-            & tr {
-                display: flex;
-                flex-wrap: wrap;
-                & th {
-                    text-align: left;
-                    font-weight: 600;
-                    padding: 24px;
-                }
-            }
-        }
-
-        & tbody {
-            & tr {
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-
-                &:nth-child(even) {
-                    background-color: #fff;
-                    border-radius: 12px;
-
-                }
-
-                &:nth-child(odd) {
-                    background-color: #F0F3F8;
-                    border-radius: 12px;
-                }
-
-                & td {
-                    text-align: left;
-                    padding: 10px 24px;
-                }
-            }
-        }
+    &:last-child {
+      border-bottom: none;
     }
+  }
 }
 
-.price-head__item-name,
-.price__item-name {
-    flex-basis: 33.333%;
+.price__name {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  flex-basis: 60%;
 }
 
-.price-head__item-price,
-.price__item-price {
-    flex-basis: 33.333%;
+.price__cost {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: normal;
+  flex-basis: 20%;
+  text-align: center;
 }
 
-.price-head__item-btn,
-.price__item-btn {
-    flex-basis: 33.333%;
+.price__cost-btn {
+  padding: 9px 44px;
+  font-size: 18px;
 }
 
-
-.price__item-name {
-    color: $secondary-text;
-    font-weight: 400;
+.price__btn {
+  flex-basis: 20%;
+  text-align: right;
 }
 
-.price__item-price {
-    color: $primary;
-    font-weight: 700;
-    font-family: $font-number;
+.price__content {
+  flex-direction: column;
+  & > * {
+    width: 100%;
+  }
 }
 
+/* price media */
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
+  .price__cost {
+    font-size: 14px;
+  }
 
-    .price__inner {
-        flex-direction: column;
-    }
-
-    .tabs__buttons {
-        overflow-x: auto;
-    }
-
+  .price__table > tbody > tr > td {
+    padding: 10px 5px 10px 0;
+  }
 }
 
-@media (max-width: 650px) {
-    .price__btn {
-        padding: 10px 20px;
-    }
+@media (max-width: 768px) {
+  .price__item {
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 1px solid $primary;
+  }
 
-    .price-head__item-name,
-    .price__item-name {
-        flex-basis: 60%;
-    }
+  .price__cost,
+  .price__btn {
+    flex-basis: calc(50% - 5px);
+    width: calc(50% - 5px);
+  }
 
-    .price-head__item-price,
-    .price__item-price {
-        flex-basis: 40%;
-    }
+  .price__table > tbody > tr > td {
+    border-bottom: none;
+    padding: 10px;
+  }
 
-    .price-head__item-btn {
-        display: none;
+  .price__cost {
+    display: flex;
+    gap: 5px;
+    & span {
+      display: block;
+      font-weight: 500;
     }
-    .price__item-btn {
-        flex-basis: 100%;
-        & button {
-            width: 100%;
-        }
-    }
-    .price__table table thead tr th {
-        padding: 16px 12px;
-    }
+  }
+}
 
-    .price__table table tbody tr td {
-        padding: 16px 12px;
+.payment-methods {
+  margin-top: 20px;
+  padding: 40px;
+  background: $primary;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  &__title {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    justify-content: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff3b;
+    backdrop-filter: blur(10px);
+    width: 90px;
+    height: 60px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 20px;
+      object-fit: contain;
     }
+  }
+
+  &__label {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+/* Payment methods media */
+@media (max-width: 1024px) {
+  .payment-methods {
+    border-radius: 20px;
+    padding: 10px;
+    &__item {
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .payment-methods {
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 10px;
+    &__list {
+      gap: 5px;
+    }
+    &__item {
+      border-radius: 10px;
+      padding: 5px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-methods {
+  }
 }

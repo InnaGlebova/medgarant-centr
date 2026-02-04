@@ -163,3 +163,170 @@
             </div>
         </div>
 </footer>
+<button class="scroll-top" type="button" aria-label="Скролл наверх" style="opacity: 1; pointer-events: auto;">
+    <svg width="6" height="10" role="img">
+        <use href="/wp-content/themes/fenix/assets/img/icons/stack.svg#menu-right"></use>
+    </svg>
+</button>
+<noindex>
+    <div class="bottom-info__wrapper cookie-policy">
+        <div class="bottom-info">
+            <p class="bottom-info__content">Для анализа посещаемости и улучшения сайта мы применяем файлы cookie и <a href="/soglasie-na-obrabotku-personalnyix-dannyix-s-pomoshhyu-servisa-yandeks/" target="_blank" rel="nofollow, noopener, noreferrer">Яндекс.Метрику</a>. Продолжая пользоваться сайтом, вы даёте согласие на обработку ваших данных. Подробная информация: <a href="/soglasie-na-obrabotku-personalnyix-dannyix/" target="_blank" rel="nofollow, noopener, noreferrer">согласие</a> и <a href="/politika-v-otnoshenii-obrabotki-i-zashhityi-personalnyix-dannyix-obshh/" target="_blank" rel="nofollow, noopener, noreferrer">политика на обработку данных</a>, <a href="/politika-konfidenczialnosti/" target="_blank" rel="nofollow, noopener, noreferrer">политика конфиденциальности</a>, <a href="/polzovatelskoe-soglashenie/" target="_blank" rel="nofollow, noopener, noreferrer">пользовательское соглашение</a>.</p>
+            <div class="bottom-info__action">
+                <button class="bottom-info__button-agree">Согласен(а)</button>
+                <button class="bottom-info__button-cross" aria-label="Закрыть"></button>
+            </div>
+        </div>
+    </div>
+</noindex>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        function getCookie(name) {
+            let matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
+        const cookiePolicy = document.querySelector('.cookie-policy');
+        if (cookiePolicy) {
+            if (getCookie('cookie-policyz') != "en") {
+                cookiePolicy.style.display = "block";
+                setTimeout(() => {
+                    cookiePolicy.classList.add('active');
+                }, 10);
+                const btnsContainer = cookiePolicy.querySelector('.bottom-info__action');
+                if (btnsContainer) {
+                    const btnsArr = btnsContainer.querySelectorAll('button');
+                    btnsArr.forEach(button => {
+                        button.addEventListener('click', evt => {
+                            cookiePolicy.classList.remove('active');
+                            setTimeout(() => {
+                                cookiePolicy.style.display = "none";
+                            }, 300);
+                            document.cookie = "cookie-policyz=en; path=/; max-age=31536000";
+                        })
+                    })
+                }
+            } else {
+                cookiePolicy.style.display = "none";
+            }
+        }
+    })
+</script>
+<style>
+    .bottom-info__wrapper {
+        position: fixed;
+        inset: auto 0 0 0;
+        z-index: 100000;
+        color: #fff;
+        font: inherit;
+        background-color: rgba(0, 0, 0, 0.73);
+        opacity: 0;
+        transition: opacity 300ms;
+        display: none;
+    }
+
+    @media screen and (max-width: 400px) {
+        .bottom-info__wrapper {
+            font-size: 12px;
+        }
+    }
+
+    .bottom-info__wrapper.active {
+        opacity: 1;
+    }
+
+    .bottom-info__wrapper .bottom-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 15px 10px 20px;
+    }
+
+    @media screen and (max-width: 700px) {
+        .bottom-info__wrapper .bottom-info {
+            flex-direction: column;
+        }
+    }
+
+    .bottom-info__wrapper .bottom-info__content {
+        margin: 0 10px 0 0;
+        line-height: 1.3;
+    }
+
+    .bottom-info__content a {
+        color: #f71729;
+        text-decoration: underline;
+        transition: color 300ms;
+    }
+
+    .bottom-info__content a:hover {
+        color: rgb(255, 66, 82);
+    }
+
+    @media screen and (max-width: 700px) {
+        .bottom-info__wrapper .bottom-info__content {
+            text-align: center;
+            margin: 0 30px 0 0;
+        }
+    }
+
+    .bottom-info__wrapper .bottom-info__action {
+        display: flex;
+    }
+
+    @media screen and (max-width: 639px) {
+        .bottom-info__wrapper .bottom-info__action {
+            margin: 10px 0 0;
+        }
+    }
+
+    .bottom-info__wrapper .bottom-info__button-agree {
+        font-size: 0.9em;
+        line-height: 2;
+        font-weight: 500;
+        color: #000;
+        border-radius: 5px;
+        padding: 2px 15px;
+        text-transform: uppercase;
+        display: block;
+        background-color: #ffffffe8;
+        border: none;
+        cursor: pointer;
+    }
+
+    .bottom-info__wrapper .bottom-info__button-cross {
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.4em;
+        background-color: transparent;
+        border: none;
+        margin-inline-start: 12px;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 700px) {
+        .bottom-info__wrapper .bottom-info__button-cross {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    }
+
+    .bottom-info__button-cross::after {
+        content: "\00D7";
+        color: #999;
+        line-height: 1;
+        transition: color 300ms;
+    }
+
+    .bottom-info__wrapper .bottom-info__button-cross:hover::after {
+        color: #fff;
+    }
+</style>
+

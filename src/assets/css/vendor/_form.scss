@@ -1,12 +1,12 @@
 .form__input {
     background-color: #fff;
-    border: 1px solid #D6D6D6;
+    border: 1px solid $stroke-primary;
     border-radius: 10px;
     padding: 16px 24px;
-    color: $tertiary-text;
+    color: $primary-text;
 
     &::placeholder {
-        color: $tertiary-text;
+        color: $primary-text;
     }
 }
 
@@ -138,7 +138,7 @@
     flex-direction: column;
 }
 
-.section-title-1.form-main__title {
+.section-title.form-main__title {
     font-size: 36px;
     margin-bottom: 16px;
 }
@@ -205,7 +205,7 @@
         margin: 0 auto;
     }
 
-    .section-title-1.form-main__title {
+    .section-title.form-main__title {
         font-size: 24px;
     }
 

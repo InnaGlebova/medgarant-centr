@@ -1,42 +1,140 @@
 <div class="stocks section-offset section-decoration">
     <div class="container swiper-container">
-        <h2 class="section-title-1 swiper-title">Акции</h2>
-        <div class="swiper stocks__inner swiper-inner">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide stocks__item animation-item scale-item animation change-item">
-                    <div class="stocks__content">
-                        <h3 class="change-item__title">Название акции</h3>
-                        <ul>
-                            <li>Описание</li>
-                            <li>Описание</li>
-                            <li>Описание</li>
-                        </ul>
-                        <button class="stocks__btn primary-btn standart-btn popup-btn change-item__btn" data-path="popup-change">Оставить заявку</button>
+        <h2 class="section-title swiper-title"><span>Акции и скидки </span> этого месяца</h2>
+        <div class="section-descr swiper-descr">
+            <p>Мы стараемся сделать качественное лечение доступным. Выберите подходящее предложение.</p>
+        </div>
+
+        <div class="swiper-inner swiper-inner--basic">
+            <div class="swiper stocks-swiper swiper--basic">
+                <div class="swiper-wrapper swiper-wrapper--basic">
+                    <div class="swiper-slide stocks__item animation-item scale-item animation change-item">
+                        <div class="stocks__picture">
+                            <span class="stocks__picture-label">БЕСПЛАТНО</span>
+                            <picture>
+                                <source srcset="assets/img/stocks/1.webp" type="image/webp">
+                                <img src="assets/img/stocks/1.jpg" alt="акция 1">
+                            </picture>
+                        </div>
+                        <div class="stocks__content">
+                            <span class="stocks__content-label">Действует бессрочно</span>
+                            <h3 class="stocks__title change-item__title">Бесплатный трансфер
+                                в клинику</h3>
+                            <div class="stocks__content-descr">
+                                <p>При заказе стационарного лечения</p>
+                            </div>
+                            <div class="stocks__content-price">
+                                <span class="stocks__price-old">1 500 ₽</span>
+                                <span class="stocks__price-new">0 ₽</span>
+                            </div>
+                            <button class="stocks__btn primary-btn standart-btn popup-btn change-item__btn"
+                                data-path="popup-change">Получить</button>
+                        </div>
                     </div>
-                    <div class="stocks__picture">
-                        <source srcset="assets/img/decor/lic-decor.webp" type="image/webp">
-                        <img src="assets/img/decor/lic-decor.png" alt="">
+                    <div class="swiper-slide stocks__item animation-item scale-item animation change-item">
+                        <div class="stocks__picture">
+                            <span class="stocks__picture-label">СКИДКА 15%</span>
+                            <picture>
+                                <source srcset="assets/img/stocks/2.webp" type="image/webp">
+                                <img src="assets/img/stocks/2.jpg" alt="акция 2">
+                            </picture>
+                        </div>
+                        <div class="stocks__content">
+                            <span class="stocks__content-label">До конца месяца</span>
+                            <h3 class="stocks__title change-item__title">Бесплатный трансфер
+                                в клинику</h3>
+                            <div class="stocks__content-descr">
+                                <p>При заказе стационарного лечения
+                                    мы оплачиваем такси до клиники или присылаем свою машину. При заказе стационарного
+                                    лечения
+                                    мы оплачиваем такси до клиники или присылаем свою машину.</p>
+                            </div>
+                            <div class="stocks__content-price">
+                                <span class="stocks__price-old">3 500 ₽</span>
+                                <span class="stocks__price-new">3 000 ₽</span>
+                            </div>
+                            <button class="stocks__btn primary-btn standart-btn popup-btn change-item__btn"
+                                data-path="popup-change">Получить скидку</button>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide stocks__item animation-item scale-item animation change-item">
-                    <div class="stocks__content">
-                        <h3 class="change-item__title">Название акции</h3>
-                        <ul>
-                            <li>Описание</li>
-                            <li>Описание</li>
-                            <li>Описание</li>
-                        </ul>
-                        <button class="stocks__btn primary-btn standart-btn popup-btn change-item__btn" data-path="popup-change">Оставить заявку</button>
+                    <div class="swiper-slide stocks__item animation-item scale-item animation change-item">
+                        <div class="stocks__picture">
+                            <span class="stocks__picture-label">В ПОДАРОК</span>
+                            <picture>
+                                <source srcset="assets/img/stocks/3.webp" type="image/webp">
+                                <img src="assets/img/stocks/3.jpg" alt="акция 3">
+                            </picture>
+                        </div>
+                        <div class="stocks__content">
+                            <span class="stocks__content-label">Действует бессрочно</span>
+                            <h3 class="stocks__title change-item__title">Бесплатный трансфер
+                                в клинику</h3>
+                            <div class="stocks__content-descr">
+                                <p>При заказе стационарного лечения
+                                    мы оплачиваем такси до клиники или присылаем свою машину.</p>
+                            </div>
+                            <div class="stocks__content-price">
+                                <span class="stocks__price-old">2 500 ₽</span>
+                                <span class="stocks__price-new">0 ₽</span>
+                            </div>
+                            <button class="stocks__btn primary-btn standart-btn popup-btn change-item__btn"
+                                data-path="popup-change">Записаться</button>
+                        </div>
                     </div>
-                    <div class="stocks__picture">
-                        <source srcset="assets/img/decor/lic-decor.webp" type="image/webp">
-                        <img src="assets/img/decor/lic-decor.png" alt="">
+                    <div class="swiper-slide stocks__item animation-item scale-item animation change-item">
+                        <div class="stocks__picture">
+                            <span class="stocks__picture-label">БЕСПЛАТНО</span>
+                            <picture>
+                                <source srcset="assets/img/stocks/4.webp" type="image/webp">
+                                <img src="assets/img/stocks/4.jpg" alt="акция 4">
+                            </picture>
+                        </div>
+                        <div class="stocks__content">
+                            <span class="stocks__content-label">Действует бессрочно</span>
+                            <h3 class="stocks__title change-item__title">Бесплатный трансфер
+                                в клинику</h3>
+                            <div class="stocks__content-descr">
+                                <p>При заказе стационарного лечения
+                                    мы оплачиваем такси до клиники или присылаем свою машину.</p>
+                            </div>
+                            <div class="stocks__content-price">
+                                <span class="stocks__price-old">3 500 ₽</span>
+                                <span class="stocks__price-new">3 000 ₽</span>
+                            </div>
+                            <button class="stocks__btn primary-btn standart-btn popup-btn change-item__btn"
+                                data-path="popup-change">Получить</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide stocks__item animation-item scale-item animation change-item">
+                        <div class="stocks__picture">
+                            <span class="stocks__picture-label">БЕСПЛАТНО</span>
+                            <picture>
+                                <source srcset="assets/img/stocks/1.webp" type="image/webp">
+                                <img src="assets/img/stocks/1.jpg" alt="акция 1">
+                            </picture>
+                        </div>
+                        <div class="stocks__content">
+                            <span class="stocks__content-label">Действует бессрочно</span>
+                            <h3 class="stocks__title change-item__title">Бесплатный трансфер
+                                в клинику</h3>
+                            <div class="stocks__content-descr">
+                                <p>При заказе стационарного лечения
+                                    мы оплачиваем такси до клиники или присылаем свою машину.</p>
+                            </div>
+                            <div class="stocks__content-price">
+                                <span class="stocks__price-old">1 500 ₽</span>
+                                <span class="stocks__price-new">0 ₽</span>
+                            </div>
+                            <button class="stocks__btn primary-btn standart-btn popup-btn change-item__btn"
+                                data-path="popup-change">Получить</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="swiper-pag stocks__swiper-pag">
-            <div class="swiper-pagination stocks__pagination"></div>
+            <div class="swiper-buttons swiper-buttons--basic">
+                <div class="swiper-button-prev stocks-swiper__button-prev swiper-button button-prev"></div>
+                <div class="swiper-button-next stocks-swiper__button-next swiper-button button-next"></div>
+            </div>
         </div>
     </div>
 </div>

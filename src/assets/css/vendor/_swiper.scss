@@ -1,89 +1,142 @@
 .swiper-pag {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
- }
- .slider-button {
-    width: 40px;
-    pointer-events: all;
-    flex-shrink: 0;
-    height: 40px;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #D2E3FD;
-    border-radius: 50%;
-    border: 1px solid #D2E3FD;
-    transition: border-color .25s linear, background-color .25s linear, opacity .25s linear;
-     &::after {
-        width: 10px;
-        height: 10px;
-        display: block;
-        margin-right: 3px;
-        content: '';
-        border-right: 2px solid #42679E;
-        border-bottom: 2px solid #42679E;
-        transform: rotate(-45deg);
-        transition: border-color .25s linear;
-    }
-    @media (hover:hover) {
-        &:not(.swiper-button-disabled):hover {
-            background-color: $primary;
-            border-color: $primary;
-            &::after {
-                border-color: #fff;
-            }
-         }
-    }
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
 
+.swiper-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  height: 50px;
+
+  &.swiper-buttons--basic {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -70px;
+    right: -70px;
+    width: calc(100% + 140px);
+  }
+}
+
+.swiper-inner--basic {
+  position: relative;
+}
+
+.swiper-button {
+  width: 50px;
+  pointer-events: all;
+  flex-shrink: 0;
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  border-radius: 50%;
+  border: 1px solid $primary;
+  transition: border-color 0.25s linear, background-color 0.25s linear,
+    opacity 0.25s linear;
+  &::after {
+    width: 10px;
+    height: 10px;
+    display: block;
+    margin-right: 3px;
+    content: "";
+    border-right: 2px solid $quaternary;
+    border-bottom: 2px solid $quaternary;
+    transform: rotate(-45deg);
+    transition: border-color 0.25s linear;
+  }
+  @media (hover: hover) {
+    &:not(.swiper-button-disabled):hover {
+      background-color: $secondary;
+      border-color: $secondary;
+      &::after {
+        border-color: #fff;
+      }
+    }
+  }
 }
 
 .swiper-button-disabled {
-    cursor:not-allowed;
-    opacity: 0.6;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
-.slider-button_prev {
-    &::after {
-        transform: rotate(-225deg);
-        margin-right: 0;
-        margin-left: 3px;
-    }
+.swiper-button-prev {
+  &::after {
+    transform: rotate(-225deg);
+    margin-right: 0;
+    margin-left: 3px;
+  }
 }
-.slider-button_white {
-    background-color: #fff;
+.swiper-button-white {
+  background-color: #fff;
 }
 .swiper-scrollbar-horizontal {
-    background-color: #D2E3FD;
-    height: 4px;
-    width: 100%;
-    border-radius: 10px;
+  background-color: #d2e3fd;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
 }
 .swiper-scrollbar-drag {
-    background-color: $stroke-secondary;
+  background-color: $stroke-secondary;
 }
 .swiper-pagination-bullet {
-    background: $stroke-secondary;
-    width: 16px;
-    height: 16px;
-    border-radius: 10px;
-    margin: 0 8px;
-    opacity: 1;
-    transition: background-color .25s linear;
-    &.swiper-pagination-bullet-active {
-        background: $primary;
-        width: 140px;
-    }
+  background: $stroke-secondary;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  margin: 0 8px;
+  opacity: 1;
+  transition: background-color 0.25s linear;
+  &.swiper-pagination-bullet-active {
+    background: $primary;
+    width: 140px;
+  }
 }
 
 .text-doc-lic__pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    margin: 0 4px;
-    &.swiper-pagination-bullet-active {
-        width: 70px;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  &.swiper-pagination-bullet-active {
+    width: 70px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .swiper-buttons {
+    &.swiper-buttons--basic {
+      position: static;
+      top: auto;
+      bottom: 0;
+      transform: translateY(0);
+      left: 0;
+      right: 0;
+      width: 100%;
+      padding: 0 90px;
     }
+  }
+
+  .swiper--basic {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-buttons {
+    &.swiper-buttons--basic {
+      justify-content: center;
+      gap: 40px;
+    }
+  }
+
 }
