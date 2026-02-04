@@ -41,6 +41,15 @@ gulp.task(
 );
 
 
+//Сценарий сборки проекта для production (без watch)
+gulp.task(
+  "build",
+  gulp.series(
+    clean,
+    gulp.parallel(html, styles, buildCss, scripts, img, webpRun, cleanFonts, otfConvert, ttfConvert, exportFonts)
+  )
+);
+
 //Cценарий архивирования готовой версии проекта
 gulp.task("zip", zipRun);
 
