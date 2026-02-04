@@ -1,0 +1,134 @@
+/* stocks */
+
+.stocks__inner {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.stocks__item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 35px;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 426px;
+        height: 360px;
+        background-color: #F0F3F8;
+        top: 30px;
+        right: 0;
+        bottom: 0;
+        background: url('../img/decor/stocks-decor.png') no-repeat center center / cover;
+        z-index: 1;
+    }
+}
+
+.stocks__content {
+    display: flex;
+    flex-direction: column;
+
+    & h3 {
+        margin-bottom: 20px;
+    }
+
+    & ul {
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 60px;
+
+        & li {
+            position: relative;
+            padding-left: 40px;
+
+            &::before {
+                position: absolute;
+                content: '✔';
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #2355D7;
+                width: 20px;
+                height: 20px;
+                background-color: #D0E5FF;
+                border-radius: 50%;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.stocks__picture {
+    position: absolute;
+    right: -76px;
+    bottom: -46px;
+    z-index: 2;
+    pointer-events: none;
+    & img {
+        max-width: 300px;
+        height: auto;
+        pointer-events: none;
+        z-index: 2;
+    }
+}
+
+.stocks__btn {
+    width: fit-content;
+    z-index: 3;
+}
+
+
+.stocks-main__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    &>* {
+        flex-basis: calc(50% - 12px);
+    }
+}
+/* stocks media */
+
+@media (max-width: 700px) {
+    .stocks__item {
+        border-radius: 10px;
+        padding:  16px;
+
+    
+        &:before {
+            width: 230px;
+            height: 200px;
+            top: 70px;
+            right: 0;
+            bottom: -40px;
+        }
+    }
+
+    .stocks__picture {
+        right: -48px;
+        bottom: -33px;
+    
+        & img {
+            max-width: 210px;
+        }
+    }
+
+    .stocks-main__inner {
+        gap: 12px;
+        &>* {
+            flex-basis: 100%;
+        }
+
+        & .stocks__btn {
+            width: 100%;
+        }
+    }
+}

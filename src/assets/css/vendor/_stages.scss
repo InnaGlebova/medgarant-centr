@@ -1,0 +1,109 @@
+/* stages */
+.stages {
+    position: relative;
+
+    &::before {
+        content: '';
+        background: url('../img/decor/decor-bg-2.svg') no-repeat center center / contain;
+        position: absolute;
+        width: 180px;
+        height: 150px;
+        top: 0;
+        left: -10px;
+    }
+}
+
+.stages__inner {
+    margin-bottom: 65px;
+    overflow: visible;
+}
+
+
+.stages__list {
+    counter-reset: num;
+}
+
+.stages__item {
+    counter-increment: num;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    transform: none !important;
+    backface-visibility: visible !important;
+
+
+    & picture {
+        & img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+    }
+
+    &:after {
+        content: "0" counter(num);
+        font-size: 64px;
+        font-weight: 700;
+        background: #B7141B;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        right: 16px;
+        top: 0;
+    }
+}
+
+.stages__item:nth-child(1),
+.stages__item:nth-child(3) {
+    &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 190px;
+        height: 48px;
+        background: url('../img/stages/arrow-down.png') no-repeat center center / contain;
+        top: -32px;
+        right: -114px;
+        z-index: 2;
+    }
+}
+
+.stages__item:nth-child(2),
+.stages__item:nth-child(4) {
+    &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 190px;
+        height: 48px;
+        background: url('../img/stages/arrow-up.png') no-repeat center center / contain;
+        bottom: -32px;
+        right: -114px;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 1224px) {
+    .stages__inner {
+        overflow: hidden;
+    }
+
+    .stages__item {
+        transform: translateZ(0) !important;
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden !important;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .stages::before {
+        display: none;
+    }
+}

@@ -1,0 +1,294 @@
+<section class="intro intro-service section-offset">
+    <picture class="intro-service__bg">
+        <source srcset="assets/img/intro/intro-bg-1.webp" type="image/webp">
+        <img src="assets/img/intro/intro-bg-1.png" alt="Реабилитация алкоголиков">
+    </picture>
+    <div class="container">
+        <div class="breadcrumbs intro-service__breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Страница услуг</a></li>
+                <li>Лечение алкоголизма методом Довженко</li>
+            </ul>
+        </div>
+        <div class="intro-service__inner change-item">
+            <h1 class="intro__title intro-service__title section-title-1 change-item__title">Реабилитация
+                <span>алкоголиков</span>
+            </h1>
+            <div class="intro-service__descr">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <div class="intro-service__cost-wrap">
+                <p class="intro__cost intro-service__cost">3200 руб</p>
+                <span class="intro-service__cost-old">3400 руб</span>
+            </div>
+            <span class="intro-service__cost-descr">*Подробности уточняйте по телефону</span>
+            <a href="#" class="intro__btn intro-service__btn standart-btn primary-btn">
+                Смотреть все цены
+            </a>
+            <div class="intro__advantages intro-service__advantages">
+                <ul>
+                    <li>
+                        <picture>
+                            <source srcset="assets/img/icons/intro/intro-1.webp" type="image/webp">
+                            <img src="assets/img/icons/intro/intro-1.png" alt="Работаем круглосуточно">
+                        </picture>
+                        <p>Работаем круглосуточно</p>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="assets/img/icons/intro/intro-2.webp" type="image/webp">
+                            <img src="assets/img/icons/intro/intro-2.png" alt="Полная анонимность">
+                        </picture>
+                        <p>Полная анонимность</p>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="assets/img/icons/intro/intro-3.webp" type="image/webp">
+                            <img src="assets/img/icons/intro/intro-3.png" alt="Гарантия качества">
+                        </picture>
+                        <p>Гарантия качества</p>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="assets/img/icons/intro/intro-4.webp" type="image/webp">
+                            <img src="assets/img/icons/intro/intro-4.png" alt="Современные программы ">
+                        </picture>
+                        <p>Современные программы </p>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="assets/img/icons/intro/intro-5.webp" type="image/webp">
+                            <img src="assets/img/icons/intro/intro-5.png" alt="Квалифицированные врачи">
+                        </picture>
+                        <p>Квалифицированные врачи</p>
+                    </li>
+                </ul>
+            </div> 
+            <button class="intro__btn intro-service__btn-call standart-btn primary-btn popup-btn change-item__btn" data-path="popup-change">
+                Заказать звонок
+            </button>
+        </div>
+    </div>
+</section>
+
+{{> navigation }}
+
+
+<div class="decor-bg">
+    {{> price }}
+    {{> stocks }}
+    {{> how }}
+</div>
+
+<section class="text section-offset">
+    <div class="container">
+        <div class="text__inner">
+            {{> text-1 }}
+            {{> text-2 }}
+        </div>
+    </div>
+</section>
+
+{{> therapy }}
+{{> about-number }}
+
+<section class="text section-offset">
+    <div class="container">
+        <div class="text__inner">
+            {{> text-3 }}
+        </div>
+    </div>
+</section>
+
+<div class="decor-bg">
+    {{> advantages }}
+    <section class="form-main section-offset animation-item transform-item animation">
+        <div class="container">
+            <div class="form-main__inner form-main__inner-2">
+                <form class="form form-main__form">
+                    <h2 class="section-title form-main__title">Действуют мобильные медицинские бригады</h2>
+                    <p class="form-main__descr">Мы понимаем, что иногда доступ к медицинским услугам может быть
+                        затруднён, поэтому мы создали возможность получить квалифицированную помощь прямо на дому или в
+                        любом удобном для вас месте.</p>
+                    <div class="form__work form-main__work">
+                        <picture>
+                            <source srcset="assets/img/icons/intro/intro-1.svg" type="image/svg+xml">
+                            <img src="assets/img/icons/intro/intro-1.png" alt="Работаем круглосуточно">
+                        </picture>
+                        <p>Работаем круглосуточно</p>
+                    </div>
+                    <a class="phone-blue form-main__phone" href="tel:+78889999999">8 (888) 999-99-99</a>
+                    <div class="form__input-wrap">
+                        <input type="text" placeholder="Ваше имя" class="form__input form-main__input" required>
+                        <label class="form__label form__label-phone">
+                            <input type="tel" placeholder="+7(___)___-__-__"
+                                class="form__input form__input-phone form-main__input" required>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="standart-btn primary-btn form__btn form-main__form-btn">Вызвать
+                        бригаду</button>
+                    <p class="form__politic">*Передавая информацию сайту, Вы принимаете условия политики защиты <a
+                            href="#">персональной информации</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+    {{> garant }}
+</div>
+
+
+<section class="text section-offset">
+    <div class="container">
+        <div class="text__inner">
+            {{> text-4 }}
+        </div>
+    </div>
+</section>
+
+
+<div class="decor-bg">
+    {{> stages }}
+    {{> form }}
+    {{> other-services }}
+</div>
+
+
+{{> doctors }}
+<section class="form-main section-offset animation-item transform-item animation">
+    <div class="container">
+        <div class="form-main__inner form-main__inner-3">
+            <form class="form form-main__form">
+                <h2 class="section-title form-main__title">Действуют мобильные медицинские бригады</h2>
+                <p class="form-main__descr">Мы понимаем, что иногда доступ к медицинским услугам может быть
+                    затруднён, поэтому мы создали возможность получить квалифицированную помощь прямо на дому или в
+                    любом удобном для вас месте.</p>
+                <div class="form__work form-main__work">
+                    <picture>
+                        <source srcset="assets/img/icons/intro/intro-1.svg" type="image/svg+xml">
+                        <img src="assets/img/icons/intro/intro-1.png" alt="Работаем круглосуточно">
+                    </picture>
+                    <p>Работаем круглосуточно</p>
+                </div>
+                <a class="phone-blue form-main__phone" href="tel:+78889999999">8 (888) 999-99-99</a>
+                <div class="form__input-wrap">
+                    <input type="text" placeholder="Ваше имя" class="form__input form-main__input" required>
+                    <label class="form__label form__label-phone">
+                        <input type="tel" placeholder="+7(___)___-__-__"
+                            class="form__input form__input-phone form-main__input" required>
+                    </label>
+                </div>
+
+                <button type="submit" class="standart-btn primary-btn form__btn form-main__form-btn">Вызвать
+                    бригаду</button>
+                <p class="form__politic">*Передавая информацию сайту, Вы принимаете условия политики защиты <a
+                        href="#">персональной информации</a></p>
+            </form>
+        </div>
+    </div>
+</section>
+{{> certificates }}
+{{> articles }}
+
+<div class="decor-bg">
+    {{> reviews }}
+    {{> rating }}
+    {{> faq }}
+</div>
+
+
+<section class="form-main section-offset animation-item transform-item animation">
+    <div class="container">
+        <div class="form-main__inner form-main__inner-4">
+            <form class="form form-main__form">
+                <h2 class="section-title form-main__title">Не откладывайте на потом</h2>
+                <p class="form-main__descr">Осложнения от запущенных болезней приводят к смерти</p>
+                <a class="phone-blue form-main__phone" href="tel:+78889999999">8 (888) 999-99-99</a>
+                <div class="form__input-wrap">
+                    <input type="text" placeholder="Ваше имя" class="form__input form-main__input" required>
+                    <label class="form__label form__label-phone">
+                        <input type="tel" placeholder="+7(___)___-__-__"
+                            class="form__input form__input-phone form-main__input" required>
+                    </label>
+                </div>
+                <div class="select-menu__wrap">
+                    <div class="select-menu">
+                        <div class="select-btn">
+                            <span class="select-btn__text">Как давно появилась проблема</span>
+                            <picture class="select-arrow">
+                                <source srcset="assets/img/icons/arrow-primary.svg" type="image/svg+xml" />
+                                <img src="assets/img/icons/arrow-primary.png" alt="arrow" />
+                            </picture>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text">Королькова Ольга Николаевна</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">Муравьёва Дарья Григорьевна</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">Ткаченко Анна Ярославовна</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select-menu">
+                        <div class="select-btn">
+                            <span class="select-btn__text">Возраст пациента</span>
+                            <picture class="select-arrow">
+                                <source srcset="assets/img/icons/arrow-primary.svg" type="image/svg+xml" />
+                                <img src="assets/img/icons/arrow-primary.png" alt="arrow" />
+                            </picture>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text">Королькова Ольга Николаевна</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">Муравьёва Дарья Григорьевна</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">Ткаченко Анна Ярославовна</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select-menu">
+                        <div class="select-btn">
+                            <span class="select-btn__text">Хронические заболевания</span>
+                            <picture class="select-arrow">
+                                <source srcset="assets/img/icons/arrow-primary.svg" type="image/svg+xml" />
+                                <img src="assets/img/icons/arrow-primary.png" alt="arrow" />
+                            </picture>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text">Королькова Ольга Николаевна</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">Муравьёва Дарья Григорьевна</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">Ткаченко Анна Ярославовна</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="submit" class="standart-btn primary-btn form__btn form-main__form-btn">Заказать
+                    звонок</button>
+                <p class="form__politic">*Передавая информацию сайту, Вы принимаете условия политики защиты <a
+                        href="#">персональной информации</a></p>
+            </form>
+        </div>
+    </div>
+</section>
+
+{{> contact }}

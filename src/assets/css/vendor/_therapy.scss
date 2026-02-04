@@ -1,0 +1,91 @@
+/* therapy */
+.therapy__item {
+    padding: 24px;
+    border-radius: 10px;
+    background-color: #fff;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        width: 239px;
+        height: 239px;
+        position: absolute;
+        right: -20px;
+        bottom: -20px;;
+        opacity: 0.2;
+        pointer-events: none;
+    }
+
+    &:nth-child(1n) {
+        &::before {
+            background: url('../img/decor/1.webp') no-repeat center center / cover;
+        }
+    }
+
+    &:nth-child(2n) {
+        &::before {
+            background: url('../img/decor/2.webp') no-repeat center center / cover;
+        }
+    }
+
+    &:nth-child(3n) {
+        &::before {
+            background: url('../img/decor/3.webp') no-repeat center center / cover;
+        }
+    }
+}
+
+.therapy__item-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.therapy__item-price {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: $primary;
+    font-family: $font-number;
+}
+
+.therapy__item-list {
+    flex-grow: 1;
+    margin-bottom: 60px;
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        & li {
+            position: relative;
+            padding-left: 20px;
+
+            &::before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: #32D583;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 7px;
+            }
+        }
+    }
+}
+
+
+
+/* therapy media */
+
+@media (max-width: 1023px) {
+    .therapy__inner {
+        margin-bottom: 65px;
+    }
+}

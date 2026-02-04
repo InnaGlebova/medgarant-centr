@@ -1,0 +1,105 @@
+/* job */
+
+.job__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    &>* {
+        flex-basis: calc(50% - 12px);
+    }
+}
+
+.job__item {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: $tertiary-text;
+}
+
+.job__item-top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-weight: 600;
+}
+
+.job__item-title {
+    font-size: 24px;
+    position: relative;
+    padding-left: 40px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 35px;
+        height: 35px;
+        background: url('../img/icons/intro/intro-5.svg') no-repeat center center / contain;
+        border-radius: 50%;
+    }
+}
+
+.job__item-stage {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25px;
+        height: 25px;
+        background: url('../img/icons/medal.svg') no-repeat center center / contain;
+    }
+}
+
+.job__item-education {
+    position: relative;
+    padding-left: 30px;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25px;
+        height: 25px;
+        background: url('../img/icons/cap.svg') no-repeat center center / contain;
+    }
+}
+
+.job__item-text {
+    & p {
+        margin-bottom: 12px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .job__inner {
+        &>* {
+            flex-basis: 100%;
+        }
+    }
+
+    .job__item-title {
+        font-size: 18px;
+    }
+
+    .job__item-title::before {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .job__item {
+        padding: 16px;
+    }
+}

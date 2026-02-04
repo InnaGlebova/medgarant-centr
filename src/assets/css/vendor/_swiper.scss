@@ -1,0 +1,89 @@
+.swiper-pag {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+ }
+ .slider-button {
+    width: 40px;
+    pointer-events: all;
+    flex-shrink: 0;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D2E3FD;
+    border-radius: 50%;
+    border: 1px solid #D2E3FD;
+    transition: border-color .25s linear, background-color .25s linear, opacity .25s linear;
+     &::after {
+        width: 10px;
+        height: 10px;
+        display: block;
+        margin-right: 3px;
+        content: '';
+        border-right: 2px solid #42679E;
+        border-bottom: 2px solid #42679E;
+        transform: rotate(-45deg);
+        transition: border-color .25s linear;
+    }
+    @media (hover:hover) {
+        &:not(.swiper-button-disabled):hover {
+            background-color: $primary;
+            border-color: $primary;
+            &::after {
+                border-color: #fff;
+            }
+         }
+    }
+
+}
+
+.swiper-button-disabled {
+    cursor:not-allowed;
+    opacity: 0.6;
+}
+.slider-button_prev {
+    &::after {
+        transform: rotate(-225deg);
+        margin-right: 0;
+        margin-left: 3px;
+    }
+}
+.slider-button_white {
+    background-color: #fff;
+}
+.swiper-scrollbar-horizontal {
+    background-color: #D2E3FD;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+}
+.swiper-scrollbar-drag {
+    background-color: $stroke-secondary;
+}
+.swiper-pagination-bullet {
+    background: $stroke-secondary;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    margin: 0 8px;
+    opacity: 1;
+    transition: background-color .25s linear;
+    &.swiper-pagination-bullet-active {
+        background: $primary;
+        width: 140px;
+    }
+}
+
+.text-doc-lic__pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    &.swiper-pagination-bullet-active {
+        width: 70px;
+    }
+}
