@@ -1,31 +1,29 @@
-<section class="form-main section-offset animation-item transform-item animation">
+<section class="form-block section-offset">
     <div class="container">
-        <div class="form-main__inner">
-            <form class="form form-main__form">
-                <h2 class="section-title form-main__title">Уговорим на <span>лечение</span></h2>
-                <p class="form-main__descr">Мы готовы предоставить профессиональную поддержку и помочь в организации
-                    интервенции, направленной на мотивацию и осознание проблемы. Вместе мы сможем найти наилучший путь к
-                    здоровому и счастливому будущему.</p>
-                <div class="form__work form-main__work">
-                    <picture>
-                        <source srcset="assets/img/icons/intro/intro-1.svg" type="image/svg+xml">
-                        <img src="assets/img/icons/intro/intro-1.png" alt="Работаем круглосуточно">
-                    </picture>
-                    <p>Работаем круглосуточно</p>
+        <div class="form-block__inner">
+            <picture class="form-block__picture">
+                <source srcset="assets/img/form/form-pic.webp" type="image/webp">
+                <img src="assets/img/form/form-pic.jpg" alt="Консультация">
+            </picture>
+            <div class="form-block__content">
+                <h2 class="form-block__title">Нужна помощь прямо сейчас?</h2>
+                <div class="form-block__descr">
+                    <p>Позвоните или оставьте заявку – это бесплатно и анонимно.</p>
+                    <p>Ваш звонок ни к чему не обязывает.</p>
                 </div>
-                <a class="phone-blue form-main__phone" href="tel:+78889999999">8 (888) 999-99-99</a>
-                <div class="form__input-wrap">
-                    <input type="text" placeholder="Ваше имя" class="form__input form-main__input" required>
-                    <label class="form__label form__label-phone">
-                        <input type="tel" placeholder="+7(___)___-__-__"
-                            class="form__input form__input-phone form-main__input" required>
+                <form class="form form-block__form">
+                    <input type="text" placeholder="Ваше имя*" class="form__input form-block__input" required>
+                    <input type="tel" placeholder="Ваш телефон*" class="form__input form-block__input" required>
+                    <button type="submit" class="standart-btn primary-btn form__btn form-block__btn">Получить
+                        консультацию</button>
+                    <label class="form-block__checkbox">
+                        <input type="checkbox" class="form-block__checkbox-input" checked required>
+                        <span class="form-block__checkbox-custom"></span>
+                        <span class="form-block__checkbox-text">Отправляя заявку, вы соглашаетесь с <a
+                                href="#">политикой конфиденциальности</a>.</span>
                     </label>
-                </div>
-
-                <button type="submit" class="standart-btn primary-btn form__btn form-main__form-btn">Заказать
-                    звонок</button>
-                <p class="form__politic">*Передавая информацию сайту, Вы принимаете условия политики защиты <a href="#">персональной информации</a></p>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </section>

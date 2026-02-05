@@ -1,77 +1,60 @@
 /* advantages */
+
 .advantages {
-    position: relative;
-
-    &::before {
-        content: '';
-        background: url('../img/decor/decor-bg-1.svg') no-repeat center center / contain;
-        position: absolute;
-        width: 180px;
-        height: 150px;
-        top: 0;
-        left: -10px;
-    }
-
-    &:after {
-        content: '';
-        background: url('../img/decor/decor-bg-2.svg') no-repeat center center / contain;
-        position: absolute;
-        width: 180px;
-        height: 150px;
-        bottom: 0;
-        right: -74px;
-    }
-
+  background: $primary-background-light;
+}
+.advantages__swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  & > * {
+    flex-basis: calc(33.333% - 13.333px);
+    height: auto;
+  }
 }
 
-.advantages__inner {
-    margin-bottom: 65px;
+.advantages__title {
+  margin-bottom: 50px;
 }
-
 .advantages__item {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    padding: 16px;
+  background-color: $quaternary-background;
+  border-radius: 10px;
+  padding: 40px;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+
+  & picture {
+    margin-bottom: 30px;
+    & img {
+      height: 50px;
+      object-fit: contain;
+    }
+  }
+}
+
+.advantages__item-name {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.advantages__swiper-buttons {
+  display: none;
+}
+@media (max-width: 1500px) {
+  .advantages__swiper-buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  }
 
-    &:before {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        filter: blur(1px);
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-    }
+  .advantages__swiper-wrapper {
+    flex-wrap: nowrap;
+    gap: 0;
 
-    & picture {
-        & img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-        }
-    }
+    & > * {
+        flex-basis: auto;
+        height: auto;
+      }
+  }
 }
-
-@media (max-width: 1024px) {
-    .advantages::before {
-        display: none;
-    }
-
-    .advantages::after {
-        display: none;
-    }
-}
-@media (max-width: 650px) {
-    .advantages__item {
-        background-color: #fff;
-    }
+@media (max-width: 768px) {
 }

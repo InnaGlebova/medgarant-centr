@@ -276,7 +276,7 @@
     left: 8px;
     width: 26px;
     height: 2px;
-    border-radius: 5px;
+    border-radius: 10px;
     background: linear-gradient(
       to right,
       $tertiary 0%,
@@ -301,7 +301,7 @@
     width: 20px;
     height: 2px;
     background-color: $tertiary;
-    border-radius: 5px;
+    border-radius: 10px;
     transition:
       opacity 0.3s ease,
       transform 0.3s ease;
@@ -314,7 +314,7 @@
     left: 8px;
     width: 24px;
     height: 2px;
-    border-radius: 5px;
+    border-radius: 10px;
     background: linear-gradient(
       to right,
       $tertiary 0%,

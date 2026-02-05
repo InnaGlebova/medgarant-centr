@@ -254,39 +254,64 @@ if (stocksSliderCheck.length > 0) {
     })
 }
 
-const advantagesSliderCheck = document.querySelectorAll('.advantages');
-if (advantagesSliderCheck.length > 0) {
-    advantagesSliderCheck.forEach((slider) => {
-        const swiperAdvantages = new Swiper(slider.querySelector('.swiper'), {
+const servicesSliderCheck = document.querySelectorAll('.services');
+if (servicesSliderCheck.length > 0) {
+    servicesSliderCheck.forEach((slider) => {
+        const swiperservices = new Swiper(slider.querySelector('.swiper'), {
             direction: 'horizontal',
-            pagination: {
-                el: slider.querySelector('.advantages__pagination'),
-                type: 'bullets',
-                clickable: true,
+            navigation: {
+                nextEl: slider.querySelector('.services-swiper__button-next'),
+                prevEl: slider.querySelector('.services-swiper__button-prev'),
             },
             effect: "slide",
-            slidesPerView: 1.3,
-            spaceBetween: 16,
+            slidesPerView: 1,
+            spaceBetween: 22,
             breakpoints: {
-                1400: {
-                    slidesPerView: 5,
-                    spaceBetween: 24,
-                },
-                1150: {
-                    slidesPerView: 4,
-                    spaceBetween: 24,
-                },
-                900: {
-                    slidesPerView: 3,
-                    spaceBetween: 24,
-                },
-                550: {
+                768: {
                     slidesPerView: 2,
-                    spaceBetween: 16,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                1300: {
+                    slidesPerView: 4,
                 },
 
             }
         });
+    })
+}
+
+const advantagesSliderCheck = document.querySelectorAll('.advantages');
+if (advantagesSliderCheck.length > 0 && window.innerWidth < 1500) {
+    advantagesSliderCheck.forEach((slider) => {
+        const swiperElement = slider.querySelector('.advantages-swiper.swiper');
+        if (swiperElement) {
+            const swiperAdvantages = new Swiper(swiperElement, {
+                direction: 'horizontal',
+                navigation: {
+                    nextEl: slider.querySelector('.advantages-swiper__button-next'),
+                    prevEl: slider.querySelector('.advantages-swiper__button-prev'),
+                },
+                effect: "slide",
+                slidesPerView: 1,
+                spaceBetween: 16,
+                breakpoints: {
+                    1499: {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+                    },
+                    1100: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    },
+                    700: {
+                        slidesPerView: 1,
+                        spaceBetween: 24,
+                    },
+                }
+            });
+        }
     })
 }
 

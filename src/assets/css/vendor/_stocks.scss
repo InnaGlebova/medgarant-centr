@@ -6,7 +6,7 @@
 }
 
 .stocks__item {
-  background-color: $primary-background;
+  background-color: $primary-background-light;
   border-radius: 10px;
   overflow: hidden;
   height: auto;
@@ -127,36 +127,5 @@
     .stocks__picture-label {
         font-size: 13px;
     }
-//   .stocks__item {
-//     border-radius: 10px;
-//     padding: 16px;
 
-//     &:before {
-//       width: 230px;
-//       height: 200px;
-//       top: 70px;
-//       right: 0;
-//       bottom: -40px;
-//     }
-//   }
-
-//   .stocks__picture {
-//     right: -48px;
-//     bottom: -33px;
-
-//     & img {
-//       max-width: 210px;
-//     }
-//   }
-
-//   .stocks-main__inner {
-//     gap: 12px;
-//     & > * {
-//       flex-basis: 100%;
-//     }
-
-//     & .stocks__btn {
-//       width: 100%;
-//     }
-//   }
 }

@@ -5,6 +5,7 @@
   padding: 40px;
   gap: 40px;
   border-radius: 10px;
+  border: 1px solid $stroke-primary;
 }
 .tab-content__wrapper {
   width: calc(65% - 20px);
@@ -67,29 +68,29 @@
 }
 
 .tab-content__title {
-    font-size: 25px;
-    line-height: 1.3;
-    margin-bottom: 30px;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 20px;
-    color: $primary-text;
-  
-    & span {
-      color: $primary;
-    }
-  
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 60px;
-      height: 5px;
-      background-color: $primary;
-      left: 0;
-      bottom: 0;
-      border-radius: 3px;
-    }
+  font-size: 25px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 20px;
+  color: $primary-text;
+
+  & span {
+    color: $primary;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: $primary;
+    left: 0;
+    bottom: 0;
+    border-radius: 3px;
+  }
 }
 .service-sidebar-tabs .tab {
   width: 100%;
@@ -108,7 +109,6 @@
   padding: 23px;
   border-radius: 10px;
   transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
-  font-size: 18px;
 
   &:hover {
     color: #fff;
@@ -126,30 +126,48 @@
 }
 
 /* tabs media */
-@media (max-width: 1024px) {
-  .tab {
-    font-size: 12px;
+@media (max-width: 1100px) {
+  .tabs__inner {
+    padding: 20px;
+    gap: 20px;
   }
 
-  .tabs__title {
-    font-size: 20px;
+  .tab-content__wrapper {
+    width: calc(65% - 10px);
   }
 
-  .tab {
-    font-size: 12px;
+  .price__tabs {
+    width: calc(35% - 10px);
   }
 }
+@media (max-width: 980px) {
+  .price__name {
+    width: 100%;
+  }
+  .tab-content__wrapper {
+    width: 100%;
+  }
 
-@media (max-width: 768px) {
+  .price__tabs {
+    width: 100%;
+  }
+  .tabs__inner {
+    flex-direction: column;
+  }
+
+  .tab-content__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
   .tabs__active-text:not(.service-sidebar-tabs .tabs__active-text) {
     position: relative;
     width: 100%;
     text-align: left;
-    font-size: 14px;
 
     &:before {
-      border-right: 3px solid $primary;
-      border-top: 3px solid $primary;
+      border-right: 3px solid $quaternary;
+      border-top: 3px solid $quaternary;
       content: "";
       display: block;
       height: 7px;
@@ -168,13 +186,13 @@
   .tabs__active:not(.service-sidebar-tabs .tabs__active) {
     display: flex;
     padding: 15px 20px;
+    white-space: normal;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    font-size: 12px;
     width: 100%;
-    color: $primary;
-    background-color: $primary-background;
+    color: $quaternary-text;
+    background-color: $secondary;
   }
 
   .tabs__container:not(.service-sidebar-tabs .tabs__container) {
@@ -207,7 +225,7 @@
     flex-direction: column;
     background-color: $primary-background;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 2px;
     gap: 0;
     transform: scale(0.95);
@@ -216,28 +234,28 @@
 
   .tab:not(.service-sidebar-tabs .tab) {
     padding: 15px 18px;
-    border-radius: 5px;
-    background: #fff;
-    color: $primary;
-    font-size: 12px;
+    border-radius: 10px;
+    background: $primary-background-light;
+    color: $primary-text;
     font-weight: 600;
     line-height: 1;
     width: 100%;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 
     &:hover {
-      background-color: #349c844f;
+      background-color: $secondary;
+      color: $quaternary-text;
     }
 
     &.active {
-      background-color: $primary;
-      color: #fff;
+      background-color: $secondary;
+      color: $quaternary-text;
     }
   }
 
   .tabs:not(.service-sidebar-tabs .tabs) {
-    border-radius: 5px;
-    background-color: $primary-background;
+    border-radius: 10px;
+    background-color: $secondary;
     margin-bottom: 40px;
   }
 
@@ -260,5 +278,30 @@
         display: none;
       }
     }
+  }
+
+  .price__name {
+    font-size: 16px;
+    flex-basis: 100%;
+  }
+
+  .price__cost {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .price__cost {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .price__btn {
+    width: 100%;
+    flex-basis: 100%;
+
+  }
+  .price__cost-btn {
+    margin: 0;
   }
 }

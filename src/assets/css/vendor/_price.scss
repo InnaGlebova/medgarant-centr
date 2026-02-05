@@ -69,17 +69,7 @@
 
 /* price media */
 
-@media (max-width: 1024px) {
-  .price__cost {
-    font-size: 14px;
-  }
-
-  .price__table > tbody > tr > td {
-    padding: 10px 5px 10px 0;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .price__item {
     flex-wrap: wrap;
     gap: 10px;
@@ -94,7 +84,9 @@
 
   .price__table > tbody > tr > td {
     border-bottom: none;
-    padding: 10px;
+  }
+  .price__cost-btn {
+    margin-left: auto;
   }
 
   .price__cost {
@@ -110,15 +102,60 @@
 .payment-methods {
   margin-top: 20px;
   padding: 40px;
-  background: $primary;
+  background: $quaternary-background;
   border-radius: 10px;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
-  gap: 30px;
+  border: 1px solid $stroke-primary;
+  flex-direction: column;
+
+  &__descr {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $stroke-primary;
+    width: 100%;
+  }
+
+  &__wrapper {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $stroke-primary;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  &__advantages {
+    & ul {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 20px;
+      & li {
+        position: relative;
+        padding-left: 30px;
+
+        &::before {
+          position: absolute;
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          left: 0;
+          background: url(../img/icons/checkmark-red.svg) no-repeat center
+            center / contain;
+        }
+      }
+    }
+  }
 
   &__title {
-    color: white;
     font-size: 24px;
     font-weight: 600;
     line-height: 1.4;
@@ -136,13 +173,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    padding: 10px;
+    gap: 10px;
+    padding: 17px 20px;
     border-radius: 10px;
-    background-color: #ffffff3b;
+    background-color: $primary-background-light;
     backdrop-filter: blur(10px);
-    width: 90px;
-    height: 60px;
+    width: 112px;
+    height: 80px;
   }
 
   &__icon {
@@ -153,14 +190,13 @@
     img {
       width: 100%;
       height: 100%;
-      max-width: 20px;
+      max-width: 24px;
       object-fit: contain;
     }
   }
 
   &__label {
-    color: white;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     text-align: center;
     line-height: 1.2;
@@ -168,32 +204,52 @@
 }
 
 /* Payment methods media */
-@media (max-width: 1024px) {
-  .payment-methods {
-    border-radius: 20px;
-    padding: 10px;
-    &__item {
-      border-radius: 20px;
-    }
-  }
-}
 
 @media (max-width: 768px) {
   .payment-methods {
     flex-direction: column;
-    border-radius: 10px;
+    padding: 20px;
     gap: 10px;
+    align-items: start;
+    text-align: start;
+    justify-content: start;
     &__list {
       gap: 5px;
+      align-items: start;
+      text-align: start;
+      justify-content: start;
     }
     &__item {
       border-radius: 10px;
-      padding: 5px;
     }
+    &__wrapper {
+      align-items: start;
+      text-align: start;
+      justify-content: start;
+    }
+
+    &__advantages {
+      & ul {
+        align-items: start;
+        text-align: start;
+        justify-content: start;
+      }
+    }
+  }
+
+  .payment-methods__wrapper {
+    gap: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .payment-methods {
+    &__item {
+      flex-basis: calc(50% - 5px);
+    }
+  }
+
+  .payment-methods__title {
+    font-size: 18px;
   }
 }
