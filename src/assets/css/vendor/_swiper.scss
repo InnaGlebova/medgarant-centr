@@ -89,8 +89,12 @@
 .swiper-scrollbar-drag {
   background-color: $stroke-secondary;
 }
+
+.swiper-pagination {
+  position: static;
+}
 .swiper-pagination-bullet {
-  background: $stroke-secondary;
+  background: #3d333980;
   width: 16px;
   height: 16px;
   border-radius: 10px;
@@ -99,19 +103,8 @@
   transition: background-color 0.25s linear;
   &.swiper-pagination-bullet-active {
     background: $primary;
-    width: 140px;
   }
 }
-
-.text-doc-lic__pagination .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  margin: 0 4px;
-  &.swiper-pagination-bullet-active {
-    width: 70px;
-  }
-}
-
 @media (max-width: 1500px) {
   .swiper-buttons {
     &.swiper-buttons--basic {

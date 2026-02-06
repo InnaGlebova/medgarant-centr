@@ -140,91 +140,6 @@ if (headerMenus.length > 0) {
         })
     });
 }
-/* sliders */
-// const introSliderCheck = document.querySelectorAll('.intro');
-// ['resize', 'load'].forEach((event) => {
-//     window.addEventListener(event, function () {
-
-//         if (introSliderCheck.length > 0) {
-//             introSliderCheck.forEach((slider) => {
-//                 if (slider.querySelector('.intro-swiper-js')) {
-
-//                     if (window.innerWidth > 1023) {
-//                         const sliderIntro = slider.querySelector('.intro-swiper-js');
-//                         const sliderWrapper = slider.querySelector('.intro-swiper-wrapper-js');
-//                         const introSlides = slider.querySelectorAll('.intro-swiper-slide-js');
-
-//                         sliderIntro.classList.add('swiper');
-//                         sliderWrapper.classList.add('swiper-wrapper');
-//                         introSlides.forEach((slide) => {
-//                             slide.classList.add('swiper-slide');
-//                         });
-
-//                         var swiperintro = new Swiper(slider.querySelector('.swiper'), {
-//                             direction: 'horizontal',
-//                             grabCursor: true,
-//                             pagination: {
-//                                 el: slider.querySelector('.intro__pagination'),
-//                                 type: 'bullets',
-//                                 clickable: true,
-//                             },
-//                             slidesPerView: 1,
-//                             effect: "creative",
-//                             creativeEffect: {
-//                                 prev: {
-//                                     translate: ["-20%", 0, -1],
-//                                 },
-//                                 next: {
-//                                     translate: ["100%", 0, 0],
-//                                 },
-//                             },
-
-
-//                         });
-//                     }
-//                     else {
-
-
-//                         const sliderIntro = slider.querySelector('.intro-swiper-js');
-//                         const sliderWrapper = slider.querySelector('.intro-swiper-wrapper-js');
-//                         const introSlides = slider.querySelectorAll('.intro-swiper-slide-js');
-//                         sliderIntro.classList.remove('swiper');
-//                         sliderWrapper.classList.remove('swiper-wrapper');
-
-//                         const deleteItems = sliderIntro.querySelectorAll('.swiper-notification');
-//                         if (deleteItems.length > 0) {
-//                             deleteItems.forEach(elem => {
-//                                 elem.remove();
-//                             })
-//                         }
-//                         introSlides.forEach((slide) => {
-//                             slide.removeAttribute("style");
-//                         });
-//                     }
-
-//                 }
-//             });
-//         }
-
-//     });
-// });
-
-
-const introSliderCheck = document.querySelectorAll('.intro');
-if (introSliderCheck.length > 0) {
-    introSliderCheck.forEach((slider) => {
-        const swiperIntro = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            pagination: {
-                el: slider.querySelector('.intro__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            effect: "slide",
-            slidesPerView: 1,
-        });
-    })
-}
 
 const stocksSliderCheck = document.querySelectorAll('.stocks');
 if (stocksSliderCheck.length > 0) {
@@ -237,7 +152,7 @@ if (stocksSliderCheck.length > 0) {
             },
             effect: "slide",
             slidesPerView: 1,
-            spaceBetween: 22,
+            spaceBetween: 20,
             breakpoints: {
                 768: {
                     slidesPerView: 2,
@@ -265,7 +180,7 @@ if (servicesSliderCheck.length > 0) {
             },
             effect: "slide",
             slidesPerView: 1,
-            spaceBetween: 22,
+            spaceBetween: 20,
             breakpoints: {
                 768: {
                     slidesPerView: 2,
@@ -274,6 +189,43 @@ if (servicesSliderCheck.length > 0) {
                     slidesPerView: 3,
                 },
                 1300: {
+                    slidesPerView: 4,
+                },
+
+            }
+        });
+    })
+}
+
+const doctorsSliderCheck = document.querySelectorAll('.doctors');
+if (doctorsSliderCheck.length > 0) {
+    doctorsSliderCheck.forEach((slider) => {
+        const swiperdoctors = new Swiper(slider.querySelector('.swiper'), {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: slider.querySelector('.doctors-swiper__button-next'),
+                prevEl: slider.querySelector('.doctors-swiper__button-prev'),
+            },
+            pagination: {
+                el: slider.querySelector('.doctors__pagination'),
+                type: 'bullets',
+                clickable: true,
+            },
+            effect: "slide",
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                500: {
+                    slidesPerView: 1.1,
+                },
+                840: {
+                    slidesPerView: 2,
+                },
+                1100: {
+                    slidesPerView: 3,
+                },
+                1500: {
                     slidesPerView: 4,
                 },
 
@@ -295,7 +247,7 @@ if (advantagesSliderCheck.length > 0 && window.innerWidth < 1500) {
                 },
                 effect: "slide",
                 slidesPerView: 1,
-                spaceBetween: 16,
+                spaceBetween: 20,
                 breakpoints: {
                     1499: {
                         slidesPerView: 3,
@@ -523,35 +475,6 @@ if (gallerySliderCheck.length > 0) {
     })
 }
 
-
-const doctorsSliderCheck = document.querySelectorAll('.doctors');
-if (doctorsSliderCheck.length > 0) {
-    doctorsSliderCheck.forEach((slider) => {
-        const swiperDoctors = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            pagination: {
-                el: slider.querySelector('.doctors__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            slidesPerView: 1,
-            spaceBetween: 24,
-            effect: "slide",
-            grabCursor: true,
-            breakpoints: {
-                650: {
-                    slidesPerView: 2,
-                },
-                1100: {
-                    slidesPerView: 3,
-                }
-            }
-        });
-    })
-}
-
-
-
 const reviewsSliderCheck = document.querySelectorAll('.reviews');
 if (reviewsSliderCheck.length > 0) {
     reviewsSliderCheck.forEach((slider) => {
@@ -608,10 +531,10 @@ if (articlesSliderCheck.length > 0) {
     })
 }
 
-const certificatesSliderCheck = document.querySelectorAll('.certificates');
-if (certificatesSliderCheck.length > 0) {
-    certificatesSliderCheck.forEach((slider) => {
-        const swiperCertificates = new Swiper(slider.querySelector('.swiper'), {
+const licensesSliderCheck = document.querySelectorAll('.licenses');
+if (licensesSliderCheck.length > 0) {
+    licensesSliderCheck.forEach((slider) => {
+        const swiperlicenses = new Swiper(slider.querySelector('.swiper'), {
             direction: 'horizontal',
             spaceBetween: 16,
             effect: "slide",
@@ -619,7 +542,7 @@ if (certificatesSliderCheck.length > 0) {
             loop: true,
             grabCursor: true,
             pagination: {
-                el: slider.querySelector('.certificates__pagination'),
+                el: slider.querySelector('.licenses__pagination'),
                 type: 'bullets',
                 clickable: true,
             },
@@ -741,7 +664,7 @@ popupOpenBtns.forEach(function (el) {
                 let originaTitle = currentPopup.querySelector('.original-title');
                 if (el.classList.contains('change-item__btn')) {
 
-                    if (el.classList.contains('doctor__btn-js')) {
+                    if (el.classList.contains('doctors__btn-js')) {
                         let currentItem = el.closest('.change-item');
                         let currentTitile = currentItem.querySelector('.change-item__title');
                         originaTitle.innerHTML = 'Записаться на приём к врачу: ' + currentTitile.innerHTML
@@ -962,10 +885,10 @@ class Tabs {
         }
 
         // Обновляем контент при смене вкладки
-        setTimeout(() => {
-            reviewsHide();
-            refreshShowMoreAll();
-        }, 50);
+        // setTimeout(() => {
+        //     reviewsHide();
+        //     refreshShowMoreAll();
+        // }, 50);
     }
 }
 new Tabs().initTabs();
@@ -1388,3 +1311,39 @@ searchForms.forEach((form) => {
         }
     });
 });
+
+// Генерация звезд рейтинга для врачей
+function initDoctorsRating() {
+    const ratingBlocks = document.querySelectorAll('.doctors__raiting[data-rating]');
+    
+    ratingBlocks.forEach((block) => {
+        const rating = parseFloat(block.getAttribute('data-rating'));
+        const starsContainer = block.querySelector('.raiting__stars');
+        
+        if (!starsContainer) return;
+        
+        // Очищаем контейнер
+        starsContainer.innerHTML = '';
+        
+        // Генерируем 5 звезд
+        // Округляем рейтинг: если дробная часть >= 0.5, округляем вверх, иначе вниз
+        const fullStars = Math.round(rating);
+        
+        for (let i = 0; i < 5; i++) {
+            const star = document.createElement('span');
+            
+            if (i < fullStars) {
+                star.classList.add('active');
+            }
+            
+            starsContainer.appendChild(star);
+        }
+    });
+}
+
+// Инициализация при загрузке страницы
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDoctorsRating);
+} else {
+    initDoctorsRating();
+}

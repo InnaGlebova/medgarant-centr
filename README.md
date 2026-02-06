@@ -33,7 +33,7 @@
 - [Услуги](https://innaglebova.github.io/medgarant-centr/service.html)
 - [Статья детальная](https://innaglebova.github.io/medgarant-centr/article.html)
 - [Статьи](https://innaglebova.github.io/medgarant-centr/articles.html)
-- [Сертификаты](https://innaglebova.github.io/medgarant-centr/certificates.html)
+- [Сертификаты](https://innaglebova.github.io/medgarant-centr/licenses.html)
 - [Контакты](https://innaglebova.github.io/medgarant-centr/contacts.html)
 - [Врач детальный](https://innaglebova.github.io/medgarant-centr/doctor.html)
 - [Врачи](https://innaglebova.github.io/medgarant-centr/doctors.html)
