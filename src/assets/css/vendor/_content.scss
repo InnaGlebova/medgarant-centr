@@ -92,7 +92,7 @@
     }
     @media (hover:hover) {
         &:hover {
-            color: $stroke-secondary;
+            color: $secondary-stroke;
             &::before {
                 filter: hue-rotate(-25deg);
             }
@@ -137,7 +137,7 @@
         content: '';
         width: 12px;
         height: 3px;
-        background-color: $stroke-secondary;
+        background-color: $secondary-stroke;
     }
 }
 .content__checked {

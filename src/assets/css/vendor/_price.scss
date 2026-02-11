@@ -27,7 +27,7 @@
     display: flex;
     width: 100%;
     padding: 10px 0;
-    border-bottom: 1px solid $stroke-primary;
+    border-bottom: 1px solid $primary-stroke;
 
     &:last-child {
       border-bottom: none;
@@ -108,20 +108,20 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  border: 1px solid $stroke-primary;
+  border: 1px solid $primary-stroke;
   flex-direction: column;
 
   &__descr {
     padding-bottom: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid $stroke-primary;
+    border-bottom: 1px solid $primary-stroke;
     width: 100%;
   }
 
   &__wrapper {
     padding-bottom: 20px;
     margin-bottom: 20px;
-    border-bottom: 1px solid $stroke-primary;
+    border-bottom: 1px solid $primary-stroke;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -239,6 +239,10 @@
 
   .payment-methods__wrapper {
     gap: 20px;
+  }
+
+  .price__cost-btn.standart-btn {
+   padding: 10px 40px;
   }
 }
 

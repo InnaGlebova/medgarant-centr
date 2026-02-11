@@ -1,6 +1,6 @@
 .form__input {
     background-color: #fff;
-    border: 1px solid $stroke-primary;
+    border: 1px solid $primary-stroke;
     border-radius: 10px;
     padding: 16px 24px;
     color: $primary-text;
@@ -72,7 +72,7 @@
 //         appearance: none;
 
 //         &:hover {
-//             border-color: $stroke-secondary;
+//             border-color: $secondary-stroke;
 //         }
 //     }
 // }
@@ -168,7 +168,7 @@
 //         color: $primary;
 
 //         &:hover {
-//             color: $stroke-secondary;
+//             color: $secondary-stroke;
 //         }
 //     }
 // }

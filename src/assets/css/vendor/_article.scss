@@ -215,7 +215,7 @@
     display: flex;
     gap: 5px;
     align-items: center;
-    color: $stroke-secondary;
+    color: $secondary-stroke;
     font-size: 14px;
     font-weight: 500;
 
@@ -224,8 +224,8 @@
         content: '';
         width: 6px;
         height: 6px;
-        border-bottom: 1px solid $stroke-secondary;
-        border-right: 1px solid $stroke-secondary;
+        border-bottom: 1px solid $secondary-stroke;
+        border-right: 1px solid $secondary-stroke;
         transform: rotate(-45deg);
         transition: border-color .25s linear;
         margin-top: 4px;
@@ -271,7 +271,7 @@
 
     @media (hover:hover) {
         &:hover {
-            border-color: $stroke-secondary;
+            border-color: $secondary-stroke;
         }
     }
 }

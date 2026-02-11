@@ -60,6 +60,10 @@
   align-items: center;
   color: $primary;
   transition: all 0.3s linear;
+
+  &:hover {
+    background-color: $tertiary-background;
+  }
 }
 
 .services__item:hover .services__btn {

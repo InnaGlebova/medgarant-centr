@@ -63,36 +63,52 @@
   & h3 {
     font-size: 30px;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 800;
     text-transform: uppercase;
     position: relative;
     margin: 20px 0;
+    
+    & span {
+      color: $primary;
+    }
   }
 
   & h4 {
     font-size: 26px;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 800;
     text-transform: uppercase;
     position: relative;
     margin: 20px 0;
+    
+    & span {
+      color: $primary;
+    }
   }
 
   & h5 {
     font-size: 24px;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 800;
     text-transform: uppercase;
     position: relative;
     margin: 20px 0;
+    
+    & span {
+      color: $primary;
+    }
   }
   & h6 {
     font-size: 22px;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 800;
     text-transform: uppercase;
     position: relative;
     margin: 20px 0;
+    
+    & span {
+      color: $primary;
+    }
   }
 
   p {
@@ -145,7 +161,7 @@
 
 .text__content.text-main {
   & blockquote {
-    border-left: 2px solid $primary;
+    border-left: 3px solid $primary;
     padding: 0;
     margin: 20px 0;
     font-weight: 500;

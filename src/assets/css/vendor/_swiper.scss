@@ -1,11 +1,6 @@
-.swiper-pag {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+.swiper {
+  border-radius: 10px;
 }
-
 .swiper-buttons {
   display: flex;
   gap: 10px;
@@ -87,7 +82,7 @@
   border-radius: 10px;
 }
 .swiper-scrollbar-drag {
-  background-color: $stroke-secondary;
+  background-color: $secondary-stroke;
 }
 
 .swiper-pagination {

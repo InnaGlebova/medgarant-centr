@@ -23,8 +23,8 @@ $tertiary-text: #b7141b;
 $quaternary-text: #ffffff;
 
 // stroke colors
-$stroke-primary: #efefef;
-$stroke-secondary: #f8f8f8;
+$primary-stroke: #efefef;
+$secondary-stroke: #f8f8f8;
 
 $error: #e63946;
 
@@ -496,7 +496,7 @@ button {
 }
 
 .select-menu .select-btn:hover {
-  border-color: $stroke-secondary;
+  border-color: $secondary-stroke;
   cursor: pointer;
 }
 
@@ -648,12 +648,8 @@ button {
 @import "vendor/_intro";
 @import "vendor/_stocks";
 @import "vendor/_about";
-@import "vendor/_directions";
-@import "vendor/_stages";
 @import "vendor/_advantages";
 @import "vendor/_price";
-@import "vendor/_choice";
-@import "vendor/_garant";
 @import "vendor/_form-block";
 @import "vendor/_reviews";
 @import "vendor/_faq";
@@ -662,23 +658,16 @@ button {
 @import "vendor/_licenses";
 @import "vendor/_contacts";
 @import "vendor/_services";
-@import "vendor/_content";
 @import "vendor/_article";
 @import "vendor/_gallery";
-@import "vendor/_programs";
 @import "vendor/_footer";
 @import "vendor/_popup";
-@import "vendor/_rating";
 @import "vendor/_navigation";
-@import "vendor/_how";
-@import "vendor/_therapy";
-@import "vendor/_about-number";
-@import "vendor/_other-services";
-@import "vendor/_job";
 @import "vendor/_notfound";
 @import "vendor/_tabs";
 @import "vendor/_treatment";
 @import "vendor/_intro-service";
+@import "vendor/_intro-article";
 
 .rating-area {
   -webkit-box-align: center;

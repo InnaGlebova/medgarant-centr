@@ -131,6 +131,7 @@
 .doctors__swiper-inner {
   margin-bottom: 50px;
 }
+
 .main-doctors__inner {
   display: flex;
   flex-wrap: wrap;
@@ -151,6 +152,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  font-weight: 700;
 }
 
 .doctors__raiting-number {
@@ -191,7 +193,7 @@
   .doctors__item .doctors__descr,
   .doctors__item .doctors__bottom {
     display: flex;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
   }
   .doctors__bottom,
   .doctors__actions {
@@ -216,6 +218,7 @@
 .main-doctors__item {
   flex-basis: calc((100% - 60px) / 4);
 }
+
 @media (max-width: 1023px) {
   .doctors__picture {
     max-height: 300px;
@@ -252,34 +255,304 @@
   }
 }
 
+/* doctors-page */
+
+.doctors-page__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  & > * {
+    flex-basis: calc(33.333% - 13.333px);
+  }
+}
+
+.doctors-page {
+  & .doctors__item {
+    background-color: $primary-background;
+  }
+
+  & .doctors__descr {
+    display: flex;
+  }
+  & .doctors__bottom {
+    display: flex;
+    & > * {
+      background-color: $quaternary-background;
+    }
+  }
+
+  & .doctors__btn {
+    max-width: 100%;
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .doctors-page__inner {
+    & > * {
+      flex-basis: calc(50% - 10px);
+    }
+  }
+}
+@media (max-width: 630px) {
+  .doctors-page__inner {
+    & > * {
+      flex-basis: 100%;
+    }
+  }
+}
 
 /* doctor-detail */
+
 .doctor-detail__intro {
   display: flex;
-  padding: 20px;
   background-color: rgba(255, 255, 255, 0.4);
   border: 1px solid #fff;
   border-radius: 10px;
-  gap: 40px;
-  align-items: center;
-  margin-bottom: 20px;
+  gap: 130px;
+  align-items: stretch;
+  margin-bottom: 50px;
 }
 
 .doctor-detail__card {
   width: 100%;
-  max-width: 427px;
+  max-width: 490px;
   flex-shrink: 0;
+  height: auto;
   position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .doctor-detail__picture {
-  overflow: hidden;
   width: 100%;
   height: 100%;
-  max-height: 427px;
+  max-width: 490px;
 
   & img {
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.doctor-detail__label {
+  position: absolute;
+  background-color: $secondary;
+  color: $quaternary;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: fit-content;
+  bottom: 20px;
+  right: 20px;
+}
+
+.doctor-detail__licenses__swiper-inner {
+  max-width: 330px;
+  margin: 0 auto;
+}
+
+.doctor-detail__title {
+  margin-bottom: 30px;
+  & span {
+    color: $primary;
+  }
+}
+
+.doctor-detail__spec {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.doctor-detail__stage {
+  background-color: $secondary;
+  color: $quaternary;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: fit-content;
+  margin-bottom: 15px;
+}
+.doctor-detail__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  & .doctors__sum-reviews {
+    font-size: 16px;
+  }
+
+  & .doctors__raiting {
+    font-size: 24px;
+  }
+}
+
+.doctor-detail__descr {
+  margin-bottom: 50px;
+}
+
+.doctor-detail__btn {
+  max-width: fit-content;
+}
+
+.doctor-detail__approach-descr {
+  margin-bottom: 20px;
+}
+
+.doctor-detail__tabs__inner.tabs__inner {
+  background-color: $primary-background-light;
+}
+.doctor-detail__tab.tab {
+  gap: 10px;
+  color: $primary-text;
+  border: 1px solid transparent;
+  background-color: $quaternary-background;
+
+  & p {
+  }
+
+  & span {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &.active {
+    background-color: $tertiary-background;
+    border-color: $primary;
+    color: $primary-text;
+  }
+
+  &:hover {
+    background-color: $tertiary-background;
+    border-color: $primary;
+    color: $primary-text;
+  }
+}
+.tabs__inner.doctor-detail__tabs__inner {
+  gap: 100px;
+}
+
+.swiper-slide.doctor-detail__licenses__item {
+  max-height: 500px;
+
+  & picture {
+    max-height: 500px;
+
+    & img {
+      max-height: 500px;
+    }
+  }
+}
+
+.doctor-detail__licenses-swiper {
+  border-radius: 10px;
+}
+
+.doctor-detail__price-table {
+  background-color: $quaternary-background;
+  padding: 40px;
+  border-radius: 10px;
+
+  & .price__cost-btn {
+    margin-left: auto;
+  }
+
+  & .price__table {
+    margin-bottom: 0;
+  }
+}
+
+.doctor-detail__approach {
+  border-bottom: 1px solid $primary-stroke;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1200px) {
+  .doctor-detail__intro {
+    gap: 40px;
+  }
+  .doctor-detail__card {
+    max-width: 360px;
+  }
+}
+@media (max-width: 980px) {
+  .tabs__inner.doctor-detail__tabs__inner {
+    gap: 0;
+  }
+  .doctor-detail__licenses__swiper-inner {
+    margin-bottom: 20px;
+  }
+
+  .doctor-detail__tab.tab:not(.service-sidebar-tabs .tab):hover, .doctor-detail__tab.tab:not(.service-sidebar-tabs .tab).active {
+    background-color: $tertiary-background;
+    color: $primary-text;
+  }
+  .doctor-detail__tabs.tabs.active:not(.service-sidebar-tabs .tabs.active) .tabs__wrapper {
+    gap: 5px;
+  }
+  .doctor-detail__tabs__active.tabs__active:not(.service-sidebar-tabs .tabs__active) {
+    background-color: $tertiary-background;
+    color: $primary-text;
+    border: 1px solid $primary;
+  }
+
+  .doctor-detail__tabs__active .tabs__active-text:not(.service-sidebar-tabs .tabs__active-text):before {
+    border-right: 3px solid $primary-text;
+    border-top: 3px solid $primary-text;
+  }
+}
+
+@media (max-width: 860px) {
+  .doctor-detail__intro {
+    flex-direction: column;
+    gap: 0;
+  }
+  .doctor-detail__about {
+    display: contents;
+  }
+
+  .doctor-detail__title {
+    order: 1;
+  }
+
+  .doctor-detail__card {
+    order: 2;
+    margin-bottom: 20px;
+  }
+
+  .doctor-detail__spec {
+    order: 3;
+  }
+
+  .doctor-detail__stage {
+    order: 4;
+  }
+
+  .doctor-detail__info {
+    order: 5;
+  }
+
+  .doctor-detail__descr {
+    order: 6;
+  }
+
+  .doctor-detail__btn {
+    order: 7;
+  }
+}
+@media (max-width: 550px) {
+  .doctor-detail__card {
+    max-width: 100%;
+  }
+
+  .doctor-detail__price-table .price__cost-btn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .doctor-detail__licenses__swiper-inner {
+    max-width: 250px;
   }
 }

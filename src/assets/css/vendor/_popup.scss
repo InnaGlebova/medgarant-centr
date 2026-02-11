@@ -165,7 +165,7 @@
         color:  $primary;
 
         &:hover {
-            color: $stroke-secondary;
+            color: $secondary-stroke;
         }
     }
 }
@@ -177,7 +177,7 @@
 
 @media (hover: hover) {
     .popup__politic a:hover {
-        color: $stroke-secondary;
+        color: $secondary-stroke;
     }
 }
 
@@ -336,11 +336,11 @@
 
 @media (hover: hover) {
     .popup-search__list>ul>li>a:hover {
-        color: $stroke-secondary;
+        color: $secondary-stroke;
     }
 
     .popup-search__list>ul>li>a:hover>p {
-        color: $stroke-secondary;
+        color: $secondary-stroke;
     }
 }
 
@@ -379,7 +379,7 @@
 
 @media (hover: hover) {
     .popup-city__item:hover {
-        color: $stroke-secondary;
+        color: $secondary-stroke;
     }
 }
 
@@ -425,8 +425,8 @@
 
     .popular-service>ul li a:hover,
     .popular-search>ul li a:hover {
-        background-color: $stroke-secondary;
-        border-color: $stroke-secondary;
+        background-color: $secondary-stroke;
+        border-color: $secondary-stroke;
         color: #fff;
     }
 }

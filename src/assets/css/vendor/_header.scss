@@ -417,6 +417,10 @@
   font-size: 18px;
 }
 
+.header__sticky {
+  border-bottom: 1px solid $primary-stroke;
+}
+
 @media (hover: hover) {
   .header__phone:hover {
     color: $primary;
@@ -506,8 +510,8 @@
     flex-direction: column;
     padding: 0;
     align-items: start;
-    border-top: 1px solid $stroke-primary;
-    border-bottom: 1px solid $stroke-primary;
+    border-top: 1px solid $primary-stroke;
+    border-bottom: 1px solid $primary-stroke;
   }
 
   .header__bottom-wrapper {
@@ -624,7 +628,7 @@
     }
 
     .header__search .container {
-      border-bottom: 1px solid $stroke-primary;
+      border-bottom: 1px solid $primary-stroke;
     }
     .header__mobile-bottom {
       display: flex;
