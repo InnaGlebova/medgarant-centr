@@ -141,443 +141,6 @@ if (headerMenus.length > 0) {
     });
 }
 
-const stocksSliderCheck = document.querySelectorAll('.stocks');
-if (stocksSliderCheck.length > 0) {
-    stocksSliderCheck.forEach((slider) => {
-        const swiperStocks = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            navigation: {
-                nextEl: slider.querySelector('.stocks-swiper__button-next'),
-                prevEl: slider.querySelector('.stocks-swiper__button-prev'),
-            },
-            effect: "slide",
-            slidesPerView: 1,
-            spaceBetween: 20,
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-                1300: {
-                    slidesPerView: 4,
-                },
-
-            }
-        });
-    })
-}
-
-const servicesSliderCheck = document.querySelectorAll('.services');
-if (servicesSliderCheck.length > 0) {
-    servicesSliderCheck.forEach((slider) => {
-        const swiperservices = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            navigation: {
-                nextEl: slider.querySelector('.services-swiper__button-next'),
-                prevEl: slider.querySelector('.services-swiper__button-prev'),
-            },
-            effect: "slide",
-            slidesPerView: 1,
-            spaceBetween: 20,
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-                1300: {
-                    slidesPerView: 4,
-                },
-
-            }
-        });
-    })
-}
-
-const doctorsSliderCheck = document.querySelectorAll('.doctors');
-if (doctorsSliderCheck.length > 0) {
-    doctorsSliderCheck.forEach((slider) => {
-        const swiperdoctors = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            loop: true,
-            navigation: {
-                nextEl: slider.querySelector('.doctors-swiper__button-next'),
-                prevEl: slider.querySelector('.doctors-swiper__button-prev'),
-            },
-            pagination: {
-                el: slider.querySelector('.doctors__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            effect: "slide",
-            slidesPerView: 1,
-            spaceBetween: 20,
-            breakpoints: {
-                500: {
-                    slidesPerView: 1.1,
-                },
-                840: {
-                    slidesPerView: 2,
-                },
-                1100: {
-                    slidesPerView: 3,
-                },
-                1500: {
-                    slidesPerView: 4,
-                },
-
-            }
-        });
-    })
-}
-
-const advantagesSliderCheck = document.querySelectorAll('.advantages');
-if (advantagesSliderCheck.length > 0 && window.innerWidth < 1500) {
-    advantagesSliderCheck.forEach((slider) => {
-        const swiperElement = slider.querySelector('.advantages-swiper.swiper');
-        if (swiperElement) {
-            const swiperAdvantages = new Swiper(swiperElement, {
-                direction: 'horizontal',
-                navigation: {
-                    nextEl: slider.querySelector('.advantages-swiper__button-next'),
-                    prevEl: slider.querySelector('.advantages-swiper__button-prev'),
-                },
-                effect: "slide",
-                slidesPerView: 1,
-                spaceBetween: 20,
-                breakpoints: {
-                    1499: {
-                        slidesPerView: 3,
-                        spaceBetween: 24,
-                    },
-                    1100: {
-                        slidesPerView: 2,
-                        spaceBetween: 24,
-                    },
-                    700: {
-                        slidesPerView: 1,
-                        spaceBetween: 24,
-                    },
-                }
-            });
-        }
-    })
-}
-
-
-const garantSliderCheck = document.querySelectorAll('.garant');
-if (garantSliderCheck.length > 0) {
-    garantSliderCheck.forEach((slider) => {
-        const swiperGarant = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            pagination: {
-                el: slider.querySelector('.garant__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            effect: "slide",
-            slidesPerView: 1.3,
-            spaceBetween: 16,
-            breakpoints: {
-                1400: {
-                    slidesPerView: 5,
-                    spaceBetween: 24,
-                },
-                1150: {
-                    slidesPerView: 4,
-                    spaceBetween: 24,
-                },
-                900: {
-                    slidesPerView: 3,
-                    spaceBetween: 24,
-                },
-                550: {
-                    slidesPerView: 2,
-                    spaceBetween: 16,
-                },
-
-            }
-        });
-    })
-}
-
-
-const howSliderCheck = document.querySelectorAll('.how');
-if (howSliderCheck.length > 0) {
-    howSliderCheck.forEach((slider) => {
-        const swiperHow = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            pagination: {
-                el: slider.querySelector('.how__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            spaceBetween: 24,
-            effect: "slide",
-            slidesPerView: 1,
-            grid: {
-                rows: 1,
-                fill: "row"
-            },
-            breakpoints: {
-                600: {
-                    slidesPerView: 2,
-                    grid: {
-                        rows: 1,
-                    }
-                },
-                1200: {
-                    slidesPerView: 3,
-                    grid: {
-                        rows: 2,
-                    }
-                }
-            }
-        });
-    })
-}
-
-const faqSliderCheck = document.querySelectorAll('.faq');
-if (faqSliderCheck.length > 0) {
-    faqSliderCheck.forEach((slider) => {
-        const swiperFaq = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            pagination: {
-                el: slider.querySelector('.faq__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            slidesPerView: 2,
-            spaceBetween: 20,
-            effect: "slide",
-            grabCursor: true,
-
-        });
-    })
-}
-
-const therapySliderCheck = document.querySelectorAll('.therapy');
-if (therapySliderCheck.length > 0) {
-    therapySliderCheck.forEach((slider) => {
-        const swipertherapy = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            pagination: {
-                el: slider.querySelector('.therapy__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            slidesPerView: 1,
-            spaceBetween: 24,
-            effect: "slide",
-            grabCursor: true,
-            breakpoints: {
-                600: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-            }
-
-        });
-    })
-}
-
-const stagesSliderCheck = document.querySelectorAll('.stages');
-if (stagesSliderCheck.length > 0) {
-    stagesSliderCheck.forEach((slider) => {
-        const swiperstages = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            pagination: {
-                el: slider.querySelector('.stages__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            slidesPerView: 1.2,
-            spaceBetween: 24,
-            effect: "slide",
-            grabCursor: true,
-            breakpoints: {
-                600: {
-                    slidesPerView: 2,
-                    spaceBetween: 16,
-                },
-                800: {
-                    slidesPerView: 3,
-                    spaceBetween: 16,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 24,
-                },
-                1224: {
-                    slidesPerView: 5,
-                    spaceBetween: 24,
-                },
-            }
-
-        });
-    })
-}
-
-
-
-
-const diplomsSliderCheck = document.querySelectorAll('.diploms');
-if (diplomsSliderCheck.length > 0) {
-    diplomsSliderCheck.forEach((slider) => {
-        const swiperDiploms = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            navigation: {
-                nextEl: slider.querySelector('.slider-button_next'),
-                prevEl: slider.querySelector('.slider-button_prev'),
-            },
-            pagination: {
-                el: slider.querySelector('.diploms__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            slidesPerView: 2,
-            spaceBetween: 18,
-            effect: "slide",
-            grabCursor: true,
-
-        });
-    })
-}
-
-const gallerySliderCheck = document.querySelectorAll('.gallery');
-if (gallerySliderCheck.length > 0) {
-    gallerySliderCheck.forEach((slider) => {
-        const swiperGallery = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            slidesPerView: "1",
-            spaceBetween: 24,
-            grabCursor: true,
-            pagination: {
-                el: slider.querySelector('.gallery__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            breakpoints: {
-                1024: {
-                    slidesPerView: "auto",
-                },
-                650: {
-                    slidesPerView: "2",
-                }
-            }
-
-        });
-    })
-}
-
-const reviewsSliderCheck = document.querySelectorAll('.reviews');
-if (reviewsSliderCheck.length > 0) {
-    reviewsSliderCheck.forEach((slider) => {
-        const swiperReviews = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            pagination: {
-                el: slider.querySelector('.reviews__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            spaceBetween: 16,
-            effect: "slide",
-            slidesPerView: 1,
-            grabCursor: true,
-            breakpoints: {
-                850: {
-                    slidesPerView: 2,
-                    spaceBetween: 24,
-                },
-            }
-        });
-    })
-}
-
-const articlesSliderCheck = document.querySelectorAll('.articles');
-if (articlesSliderCheck.length > 0) {
-    articlesSliderCheck.forEach((slider) => {
-        const swiperArticles = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            pagination: {
-                el: slider.querySelector('.articles__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            spaceBetween: 16,
-            effect: "slide",
-            slidesPerView: 1.1,
-            grabCursor: true,
-            breakpoints: {
-                650: {
-                    slidesPerView: 2,
-                    spaceBetween: 16,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 24,
-                },
-                1400: {
-                    slidesPerView: 4,
-                    spaceBetween: 24,
-                },
-            }
-        });
-    })
-}
-
-const licensesSliderCheck = document.querySelectorAll('.licenses');
-if (licensesSliderCheck.length > 0) {
-    licensesSliderCheck.forEach((slider) => {
-        const swiperlicenses = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            spaceBetween: 16,
-            effect: "slide",
-            slidesPerView: 1.2,
-            loop: true,
-            grabCursor: true,
-            pagination: {
-                el: slider.querySelector('.licenses__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-            breakpoints: {
-                650: {
-                    slidesPerView: 3,
-                    spaceBetween: 24,
-                },
-                360: {
-                    slidesPerView: 2,
-                    spaceBetween: 16,
-                }
-            }
-        });
-    })
-}
-
-const textDocLicSliderCheck = document.querySelectorAll('.text-doc-lic');
-if (textDocLicSliderCheck.length > 0) {
-    textDocLicSliderCheck.forEach((slider) => {
-        const swiperTextDocLic = new Swiper(slider.querySelector('.swiper'), {
-            direction: 'horizontal',
-            spaceBetween: 5,
-            effect: "slide",
-            slidesPerView: 7,
-            loop: true,
-            grabCursor: true,
-            pagination: {
-                el: slider.querySelector('.text-doc-lic__pagination'),
-                type: 'bullets',
-                clickable: true,
-            },
-        });
-    })
-}
 
 /* Mask phone */
 [].forEach.call(document.querySelectorAll('input[type=tel]'), function (input) {
@@ -912,6 +475,247 @@ if (animationItems.length > 0) {
 Fancybox.bind("[data-fancybox]", {
     // Your custom options
 });
+
+// sliders
+
+const stocksSliderCheck = document.querySelectorAll('.stocks');
+if (stocksSliderCheck.length > 0) {
+    stocksSliderCheck.forEach((slider) => {
+        const swiperStocks = new Swiper(slider.querySelector('.swiper'), {
+            direction: 'horizontal',
+            navigation: {
+                nextEl: slider.querySelector('.stocks-swiper__button-next'),
+                prevEl: slider.querySelector('.stocks-swiper__button-prev'),
+            },
+            effect: "slide",
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                1300: {
+                    slidesPerView: 4,
+                },
+
+            }
+        });
+    })
+}
+
+const servicesSliderCheck = document.querySelectorAll('.services');
+if (servicesSliderCheck.length > 0) {
+    servicesSliderCheck.forEach((slider) => {
+        const swiperservices = new Swiper(slider.querySelector('.swiper'), {
+            direction: 'horizontal',
+            navigation: {
+                nextEl: slider.querySelector('.services-swiper__button-next'),
+                prevEl: slider.querySelector('.services-swiper__button-prev'),
+            },
+            effect: "slide",
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                1300: {
+                    slidesPerView: 4,
+                },
+
+            }
+        });
+    })
+}
+
+const doctorsSliderCheck = document.querySelectorAll('.doctors');
+if (doctorsSliderCheck.length > 0) {
+    doctorsSliderCheck.forEach((slider) => {
+        const swiperdoctors = new Swiper(slider.querySelector('.swiper'), {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: slider.querySelector('.doctors-swiper__button-next'),
+                prevEl: slider.querySelector('.doctors-swiper__button-prev'),
+            },
+            pagination: {
+                el: slider.querySelector('.doctors__pagination'),
+                type: 'bullets',
+                clickable: true,
+            },
+            effect: "slide",
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            breakpoints: {
+                500: {
+                    slidesPerView: 1.2,
+                },
+                840: {
+                    slidesPerView: 2,
+                },
+                1100: {
+                    slidesPerView: 3,
+                },
+                1500: {
+                    slidesPerView: 4,
+                },
+
+            }
+        });
+    })
+}
+
+const advantagesSliderCheck = document.querySelectorAll('.advantages');
+if (advantagesSliderCheck.length > 0 && window.innerWidth < 1500) {
+    advantagesSliderCheck.forEach((slider) => {
+        const swiperElement = slider.querySelector('.advantages-swiper.swiper');
+        if (swiperElement) {
+            const swiperAdvantages = new Swiper(swiperElement, {
+                direction: 'horizontal',
+                navigation: {
+                    nextEl: slider.querySelector('.advantages-swiper__button-next'),
+                    prevEl: slider.querySelector('.advantages-swiper__button-prev'),
+                },
+                effect: "slide",
+                slidesPerView: 1,
+                spaceBetween: 20,
+                breakpoints: {
+                    1499: {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+                    },
+                    1100: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    },
+                    700: {
+                        slidesPerView: 1,
+                        spaceBetween: 24,
+                    },
+                }
+            });
+        }
+    })
+}
+
+const licensesSliderCheck = document.querySelectorAll('.licenses');
+if (licensesSliderCheck.length > 0) {
+    licensesSliderCheck.forEach((slider) => {
+        const swiperlicenses = new Swiper(slider.querySelector('.swiper'), {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: slider.querySelector('.licenses-swiper__button-next'),
+                prevEl: slider.querySelector('.licenses-swiper__button-prev'),
+            },
+            pagination: {
+                el: slider.querySelector('.licenses__pagination'),
+                type: 'bullets',
+                clickable: true,
+            },
+            effect: "slide",
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            breakpoints: {
+                500: {
+                    slidesPerView: 2,
+                },
+                700: {
+                    slidesPerView: 3,
+                },
+                1100: {
+                    slidesPerView: 4,
+                },
+                1300: {
+                    slidesPerView: 5,
+                },
+                1500: {
+                    slidesPerView: 6,
+                },
+
+            }
+        });
+    })
+}
+
+
+
+
+const gallerySliderCheck = document.querySelectorAll('.gallery');
+if (gallerySliderCheck.length > 0) {
+    gallerySliderCheck.forEach((slider) => {
+        const swipergallery = new Swiper(slider.querySelector('.swiper'), {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: slider.querySelector('.gallery-swiper__button-next'),
+                prevEl: slider.querySelector('.gallery-swiper__button-prev'),
+            },
+            pagination: {
+                el: slider.querySelector('.gallery__pagination'),
+                type: 'bullets',
+                clickable: true,
+            },
+            effect: "slide",
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            breakpoints: {
+                500: {
+                    slidesPerView: 1.2,
+                },
+                840: {
+                    slidesPerView: 2,
+                },
+                1100: {
+                    slidesPerView: 3,
+                },
+                1500: {
+                    slidesPerView: 4,
+                },
+
+            }
+        });
+    })
+}
+
+const reviewsSliderCheck = document.querySelectorAll('.reviews');
+if (reviewsSliderCheck.length > 0) {
+    reviewsSliderCheck.forEach((slider) => {
+        const swiperreviews = new Swiper(slider.querySelector('.swiper'), {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: slider.querySelector('.reviews-swiper__button-next'),
+                prevEl: slider.querySelector('.reviews-swiper__button-prev'),
+            },
+            pagination: {
+                el: slider.querySelector('.reviews__pagination'),
+                type: 'bullets',
+                clickable: true,
+            },
+            effect: "slide",
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                500: {
+                    slidesPerView: 1.2,
+                },
+                840: {
+                    slidesPerView: 2,
+                },
+                1100: {
+                    slidesPerView: 3,
+                },
+            }
+        });
+    })
+}
 
 
 
@@ -1314,7 +1118,7 @@ searchForms.forEach((form) => {
 
 // Генерация звезд рейтинга для врачей
 function initDoctorsRating() {
-    const ratingBlocks = document.querySelectorAll('.doctors__raiting[data-rating]');
+    const ratingBlocks = document.querySelectorAll('.raiting-inner[data-rating]');
     
     ratingBlocks.forEach((block) => {
         const rating = parseFloat(block.getAttribute('data-rating'));

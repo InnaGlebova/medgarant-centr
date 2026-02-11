@@ -1,0 +1,46 @@
+/* treatment */
+
+.treatment__inner {
+  display: flex;
+  gap: 20px;
+
+  & > * {
+    flex-basis: calc(50% - 10px);
+    border-radius: 10px;
+    border: 1px solid $stroke-primary;
+    padding: 40px 20px;
+
+    & > span {
+      font-size: 25px;
+      text-transform: uppercase;
+      color: $primary;
+      font-weight: 700;
+      margin-bottom: 30px;
+      display: block;
+    }
+
+    & > p {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.treatment__risks ul li::before {
+  background: url(../img/icons/risk-icon.svg);
+  background-repeat: no-repeat;
+}
+
+.treatment__advantages ul li::before {
+  background: url(../img/icons/advantages-icon.svg);
+  background-repeat: no-repeat;
+}
+
+@media(max-width: 768px) {
+    .treatment__inner {
+        flex-wrap: wrap;
+        & > * {
+            flex-basis: 100%;
+            padding: 20px;
+        }
+    }
+}

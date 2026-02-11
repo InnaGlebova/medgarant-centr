@@ -11,8 +11,16 @@
 }
 
 .text__content {
-  background-color: $quaternary-background;
   position: relative;
+
+  & a {
+    color: $primary;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
 
   & blockquote {
     background-color: $primary-background-light;
@@ -20,8 +28,9 @@
     padding: 40px;
     font-size: 30px;
     margin: 50px 0;
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
+    font-size: inherit;
   }
 
   & h2 {
@@ -49,6 +58,41 @@
       bottom: 0;
       border-radius: 3px;
     }
+  }
+
+  & h3 {
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    margin: 20px 0;
+  }
+
+  & h4 {
+    font-size: 26px;
+    line-height: 1.5;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    margin: 20px 0;
+  }
+
+  & h5 {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    margin: 20px 0;
+  }
+  & h6 {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    margin: 20px 0;
   }
 
   p {
@@ -82,6 +126,84 @@
       }
     }
   }
+
+  & picture {
+    flex: 1 1 calc(40% - 10px);
+    max-width: calc(40% - 10px);
+    float: right;
+    border-radius: 10px;
+    height: auto;
+    padding: 10px;
+
+    & img {
+      border-radius: 10px;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}
+
+.text__content.text-main {
+  & blockquote {
+    border-left: 2px solid $primary;
+    padding: 0;
+    margin: 20px 0;
+    font-weight: 500;
+    text-align: start;
+    background: transparent;
+    border-radius: 0;
+    padding-left: 20px;
+  }
+}
+
+.text__content .table-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $tertiary-background;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 4px;
+
+    &:hover {
+      background: $primary;
+    }
+  }
+}
+.text__content table {
+  width: 100%;
+  min-width: 800px;
+  margin: 40px 0;
+}
+.text__content table thead th {
+  background: $primary;
+  border-radius: 10px 10px 0 0;
+  border-right: 1px solid #fff;
+  color: $quaternary;
+  padding: 20px 25px;
+}
+.text__content table tbody tr {
+  background-color: #fff;
+}
+.text__content table tbody td {
+  padding: 20px;
+}
+.text__content table tbody tr:last-child td {
+  border-radius:  0 0 10px 10px;
+}
+
+.text__content table tbody tr:nth-child(2n) {
+  background: $tertiary-background;
 }
 
 /* text media */
@@ -93,8 +215,41 @@
   .text__content {
     & blockquote {
       font-size: 20px;
-      padding: 40px 20px;
-      margin: 40px 0;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    & h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    & h3 {
+      font-size: 24px;
+    }
+
+    & h4 {
+      font-size: 22px;
+    }
+
+    & h5 {
+      font-size: 20px;
+    }
+    & h6 {
+      font-size: 18px;
+    }
+
+    & picture {
+      flex: 100%;
+      max-width: 100%;
+      float: none;
+      border-radius: 10px;
+      height: auto;
+      padding: 0;
+  
+      & img {
+        border-radius: 10px;
+        object-fit: cover;
+        height: 100%;
+      }
     }
   }
 }

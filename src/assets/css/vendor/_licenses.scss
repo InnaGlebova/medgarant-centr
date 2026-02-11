@@ -1,42 +1,46 @@
 /* licenses */
-.licenses__inner  {
-    margin-bottom: 65px;
+.licenses__inner {
+  margin-bottom: 65px;
 }
 
 .licenses__item {
-    overflow: hidden;
-    border-radius: 10px;
-    padding: 16px;
-    outline: none;
-    background-color: rgba(1, 132, 202, 0.2);
+  overflow: hidden;
+  border-radius: 10px;
+  outline: none;
 }
 
-
-.licenses__item picture {
-    transition: transform 0.4s;
-    border-radius: 10px;
-    position: relative;
-
-    & img {
-        border-radius: 10px;
-        object-fit: cover;
-    }
+.all-licenses__link {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.licenses__swiper-inner {
+  margin-bottom: 50px;
 }
 
-.licenses__item picture:hover {
-    transform: scale(1.1);
+.licenses__pagination {
+  display: none;
 }
 
+@media (max-width: 840px) {
+  .licenses__swiper-buttons {
+    display: none;
+  }
 
-
+  .licenses__pagination {
+    display: block;
+  }
+  .licenses .swiper-wrapper {
+    align-items: stretch;
+  }
+}
 @keyframes myAnim {
-    0% {
-        -webkit-transform: scaleX(0.4);
-        transform: scaleX(0.4);
-    }
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+  }
 
-    100% {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-    }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 }

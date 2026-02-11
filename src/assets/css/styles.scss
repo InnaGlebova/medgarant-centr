@@ -84,85 +84,27 @@ body {
     }
   }
 }
+blockquote {
+  background-color: $primary-background-light;
+  border-radius: 10px;
+  padding: 40px;
+  font-size: 30px;
+  margin: 50px 0;
+  font-weight: 500;
+  text-align: center;
+}
 
 a,
 button {
-  transition: color 0.25s linear, border-color 0.25s linear,
+  transition:
+    color 0.25s linear,
+    border-color 0.25s linear,
     background-color 0.25s linear;
 }
 
-.social-wa {
-  background-color: $success;
-  padding: 8px 12px;
-  padding-left: 30px;
-  border-radius: 10px;
-  color: #fff;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 15px;
-    background: url("../img/icons/whatsapp.svg") center center no-repeat;
-    background-size: contain;
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      background-color: $success;
-    }
-  }
+.bg-grey {
+  background-color: $primary-background-light;
 }
-
-.social__wrap {
-  display: flex;
-  gap: 10px;
-}
-
-.social-tg {
-  background-color: $primary;
-  padding: 8px 12px;
-  padding-left: 30px;
-  border-radius: 10px;
-  color: #fff;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 15px;
-    background: url("../img/icons/telegram.svg") center center no-repeat;
-    background-size: contain;
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      background-color: $stroke-secondary;
-    }
-  }
-}
-
-.phone-blue {
-  color: $primary;
-  font-size: 24px;
-  font-weight: 600;
-  font-family: $font-number;
-
-  @media (hover: hover) {
-    &:hover {
-      color: $stroke-secondary;
-    }
-  }
-}
-
 .rating {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,21 +127,6 @@ button {
   background-size: cover;
 }
 
-.decor-bg {
-  position: relative;
-
-  &::before {
-    content: "";
-    background: url("../img/decor/decor-bg.svg") no-repeat center center / cover;
-    padding: 300px 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    overflow: visible;
-    height: 100%;
-    z-index: -1;
-  }
-}
 
 .container {
   width: 100%;
@@ -219,6 +146,7 @@ button {
 .section-pb {
   padding-bottom: 100px;
 }
+
 .section-title {
   font-size: 36px;
   line-height: 1.5;
@@ -247,7 +175,6 @@ button {
 
 .section-descr {
   margin-bottom: 50px;
-  font-size: 20px;
 }
 
 .section-top {
@@ -305,6 +232,9 @@ button {
   justify-content: center;
   align-items: center;
   font-size: 20px;
+  &--small {
+    padding: 10px 40px;
+  }
 }
 
 .primary-btn {
@@ -320,7 +250,6 @@ button {
     }
   }
 }
-
 
 .secondary-btn {
   background-color: transparent;
@@ -419,13 +348,23 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 1px solid rgba(191, 31, 31, 0.2588235294);
-  background-color: var(--white);
-  box-shadow: 0 0 5px rgba(34, 0, 2, 0.1921568627);
+  border: 1px solid $primary;
+  background-color: $primary;
   opacity: 0;
   transform: rotate(-90deg);
   transition: opacity 0.7s;
   cursor: pointer;
+  transition: background 0.3s linear;
+  & svg path {
+    transition: all 0.3s linear;
+  }
+  &:hover {
+    background-color: $quaternary;
+
+    & svg path {
+      stroke: $primary;
+    }
+  }
 }
 @keyframes transformItem {
   0% {
@@ -442,27 +381,33 @@ button {
 .scale-item {
   scale: 0.6;
   opacity: 0;
-  transition: scale 0.4s ease, opacity 0.3s ease;
+  transition:
+    scale 0.4s ease,
+    opacity 0.3s ease;
 }
 
 .rotate-item {
   transform: rotateY(180deg);
   opacity: 0;
-  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  transition:
+    transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     opacity 0.3s ease;
 
   &:nth-child(2n) {
-    transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transition:
+      transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275),
       opacity 0.3s ease;
   }
 
   &:nth-child(3n) {
-    transition: transform 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transition:
+      transform 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
       opacity 0.3s ease;
   }
 
   &:nth-child(5n) {
-    transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1),
+    transition:
+      transform 2s cubic-bezier(0.075, 0.82, 0.165, 1),
       opacity 0.3s ease;
   }
 }
@@ -608,10 +553,12 @@ button {
 .select-menu .select-btn__text.selected {
   color: $tertiary-text;
 }
-
+.breadcrumbs-service {
+  background-color: $primary-background-light;
+}
 .breadcrumbs {
-  margin-bottom: 40px;
-  padding-top: 60px;
+  padding: 20px 0;
+  
 }
 
 .breadcrumbs__list {
@@ -625,11 +572,13 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
+  line-height: 1;
 
   & a {
-    color: $tertiary-text;
+    color: $primary-text;
     display: flex;
     align-items: center;
+    line-height: 1;
 
     @media (hover: hover) {
       &:hover {
@@ -640,18 +589,18 @@ button {
 }
 
 .breadcrumbs li::after {
-  content: "●";
+  content: ">";
   display: block;
-  font-size: 5px;
+  color: $primary;
   line-height: 1;
+  font-size: 22px;
 }
 
 .breadcrumbs li:last-of-type {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: $primary;
-  font-weight: 600;
+  color: $primary-text;
 
   &::after {
     display: none;
@@ -711,7 +660,7 @@ button {
 @import "vendor/_doctors";
 @import "vendor/_articles";
 @import "vendor/_licenses";
-@import "vendor/_contact";
+@import "vendor/_contacts";
 @import "vendor/_services";
 @import "vendor/_content";
 @import "vendor/_article";
@@ -728,6 +677,8 @@ button {
 @import "vendor/_job";
 @import "vendor/_notfound";
 @import "vendor/_tabs";
+@import "vendor/_treatment";
+@import "vendor/_intro-service";
 
 .rating-area {
   -webkit-box-align: center;
@@ -774,7 +725,7 @@ button {
 .rating-area > input:checked ~ label:hover,
 .rating-area > input:checked ~ label:hover ~ label,
 .rating-area > label:hover ~ input:checked ~ label {
-  color: #995ef7;
+  color: #b7141b;
 }
 
 .rate-area > label:active {
@@ -782,7 +733,14 @@ button {
 }
 
 .zoom {
+  transition: transform 0.4s linear;
+  border-radius: 10px;
   position: relative;
+
+  & img {
+    border-radius: 10px;
+    object-fit: cover;
+  }
 }
 
 .zoom::before {
@@ -792,7 +750,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(1, 132, 202, 0.4);
+  background-color: hsla(357, 80%, 40%, 0.2);
   opacity: 0;
   border-radius: 10px;
   transition: opacity 0.3s linear;
@@ -811,6 +769,10 @@ button {
   transition: opacity 0.3s linear;
 }
 
+.zoom:hover {
+  transform: scale(1.1);
+}
+
 .zoom:hover::before,
 .zoom:hover::after {
   opacity: 1;
@@ -827,15 +789,17 @@ button {
 
 ::-webkit-scrollbar-track {
   background-color: transparent;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: $stroke-secondary;
+  background-color: $primary;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: $primary;
+  cursor: pointer;
 }
 
 ::-webkit-resizer {
@@ -868,11 +832,6 @@ button {
 
   .phone-blue {
     font-size: 22px;
-  }
-
-  .breadcrumbs {
-    margin-bottom: 35px;
-    padding-top: 45px;
   }
 
   .section-pt {
@@ -926,8 +885,7 @@ button {
   }
 
   .breadcrumbs {
-    margin-bottom: 30px;
-    padding-top: 35px;
+    padding: 10px 0;
   }
 
   .breadcrumbs__list {
@@ -948,6 +906,12 @@ button {
 
   .section-pb {
     padding-bottom: 80px;
+  }
+
+  blockquote {
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px 0;
   }
 }
 @media (max-width: 1500px) {

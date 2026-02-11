@@ -1,8 +1,5 @@
 /* advantages */
 
-.advantages {
-  background: $primary-background-light;
-}
 .advantages__swiper-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -38,6 +35,10 @@
   font-weight: 700;
 }
 
+.advantages__item-descr {
+  font-size: 18px;
+}
+
 .advantages__swiper-buttons {
   display: none;
 }
@@ -65,6 +66,12 @@
 
   & span {
     font-weight: 600;
+  }
+}
+
+.advantages-about {
+  & .advantages__item {
+    background-color: $primary-background-light;
   }
 }
 @media (max-width: 1500px) {

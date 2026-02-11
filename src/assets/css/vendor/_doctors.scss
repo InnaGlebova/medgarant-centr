@@ -140,209 +140,6 @@
   display: none;
 }
 
-@media (max-width: 840px) {
-  .doctors__swiper-buttons {
-    display: none;
-  }
-
-  .doctors__pagination {
-    display: block;
-  }
-  .doctors .swiper-wrapper {
-    align-items: stretch;
-  }
-  .doctors__item {
-    height: auto;
-  }
-
-  .doctors__item .doctors__descr,
-  .doctors__item .doctors__bottom {
-    display: flex;
-  }
-}
-
-@media (max-width: 840px) {
-  .doctors__bottom,
-  .doctors__actions {
-    & > * {
-      flex-basis: 100%;
-    }
-  }
-
-  .doctors__name,
-  .doctors__post,
-  .doctors__info,
-  .doctors__descr,
-  .doctors__bottom {
-    margin-bottom: 10px;
-  }
-
-  .doctors__content {
-    padding: 10px;
-  }
-}
-
-.main-doctors__item {
-  flex-basis: calc((100% - 60px) / 4);
-}
-
-/* doctor */
-.doctors__intro {
-  display: flex;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 1px solid #fff;
-  border-radius: 10px;
-  gap: 40px;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.doctors__card {
-  width: 100%;
-  max-width: 427px;
-  flex-shrink: 0;
-  position: relative;
-}
-
-.doctors__picture {
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  max-height: 427px;
-
-  & img {
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-}
-
-.doctors__age {
-  position: absolute;
-  bottom: 14px;
-  left: 14px;
-  right: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: rgba(210, 227, 253, 1);
-  border-radius: 10px;
-  padding: 14px;
-  z-index: 2;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.doctors__about {
-  display: flex;
-  flex-direction: column;
-}
-
-.doctors__advantages {
-  margin-bottom: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(210, 227, 253, 1);
-
-  & > ul {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    & > li {
-      display: flex;
-      font-size: 14px;
-      align-items: center;
-
-      & picture {
-        margin-right: 8px;
-        max-width: 20px;
-        max-height: 18px;
-
-        & img {
-          height: 100%;
-          object-fit: contain;
-        }
-      }
-
-      & span {
-        margin-right: 6px;
-      }
-
-      & p {
-        font-weight: 500;
-        color: $primary-text;
-      }
-    }
-  }
-}
-
-.doctors__text {
-  font-size: 14px;
-  margin-bottom: 70px;
-}
-
-.doctors__bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.doctors__btns {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-}
-
-.doctors__cost {
-  padding: 13px 20px;
-  border-radius: 10px;
-  border: 1px solid $stroke-secondary;
-  font-size: 14px;
-
-  & span {
-    font-weight: 700;
-    color: rgba(66, 103, 158, 1);
-  }
-}
-
-.doctors__rating {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-
-  & > span {
-    font-size: 26px;
-    color: $primary-text;
-    display: block;
-    padding-right: 10px;
-    border-right: 1px solid rgba(210, 227, 253, 1);
-  }
-
-  & > a {
-    padding: 6px 10px;
-    border-radius: 10px;
-    background-color: transparent;
-
-    & picture {
-      transition: filter 0.25s linear;
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        background-color: $primary;
-
-        & picture {
-          filter: grayscale(1) brightness(0) invert(1);
-        }
-      }
-    }
-  }
-}
-
 .doctors__info {
   display: flex;
   align-items: center;
@@ -376,176 +173,49 @@
   white-space: nowrap;
 }
 
-.doctors__info-item {
-  padding: 40px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 1px solid #fff;
-  flex: 1;
-}
+@media (max-width: 840px) {
+  .doctors__swiper-buttons {
+    display: none;
+  }
 
-.doctors__schedule {
-  & table {
+  .doctors__pagination {
     display: block;
   }
-
-  & tbody {
-    display: block;
+  .doctors .swiper-wrapper {
+    align-items: stretch;
+  }
+  .doctors__item {
+    height: auto;
   }
 
-  & tr {
+  .doctors__item .doctors__descr,
+  .doctors__item .doctors__bottom {
     display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 20px;
-    border-radius: 10px;
-    font-weight: 500;
-
-    &:nth-child(odd) {
-      background-color: #fff;
+    transition: all .3s linear;
+  }
+  .doctors__bottom,
+  .doctors__actions {
+    & > * {
+      flex-basis: 100%;
     }
   }
 
-  & td {
-    display: block;
-    color: $primary-text;
+  .doctors__name,
+  .doctors__post,
+  .doctors__info,
+  .doctors__descr,
+  .doctors__bottom {
+    margin-bottom: 10px;
+  }
 
-    & span {
-      color: $stroke-secondary;
-    }
+  .doctors__content {
+    padding: 10px;
   }
 }
 
-.diploms__top {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
+.main-doctors__item {
+  flex-basis: calc((100% - 60px) / 4);
 }
-
-.diploms__title {
-  font-size: 30px;
-  color: $primary-text;
-}
-
-.doctors__diploms {
-  max-width: calc(50% - 10px);
-}
-
-.diploms__slide {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.diploms__text {
-  display: block;
-  padding: 20px;
-  font-size: 14px;
-}
-
-.diploms__pagination {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 24px;
-}
-
-.doctors__info-title {
-  font-size: 30px;
-
-  color: $primary-text;
-  margin-bottom: 30px;
-}
-
-.doctors__education {
-  & > ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    & span {
-      color: $stroke-secondary;
-      font-weight: 700;
-    }
-
-    & > li {
-      padding-left: 25px;
-      position: relative;
-
-      &::before {
-        display: block;
-        content: "";
-        width: 9px;
-        height: 9px;
-        background-color: $stroke-secondary;
-        position: absolute;
-        top: 6px;
-        left: 0;
-        border-radius: 50%;
-        z-index: 2;
-      }
-
-      &::after {
-        display: block;
-        content: "";
-        width: 1px;
-        height: calc(100% + 14px);
-        z-index: 1;
-        position: absolute;
-        top: 15px;
-        left: 4px;
-        background-color: rgba(210, 227, 253, 1);
-      }
-
-      &:last-child {
-        &::after {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-.doctors__profile {
-  & > ul {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    & > li {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-
-      &::before {
-        flex-shrink: 0;
-        display: block;
-        content: "";
-        width: 16px;
-        height: 16px;
-        background: url("../img/icons/bagage.svg") center center no-repeat;
-        background-size: contain;
-      }
-    }
-  }
-}
-
-.doctors-main__inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-
-  & > * {
-    flex-basis: calc(33.3333% - 16px);
-  }
-}
-
 @media (max-width: 1023px) {
   .doctors__picture {
     max-height: 300px;
@@ -559,18 +229,12 @@
 }
 
 @media (max-width: 650px) {
-  .doctors__item {
-    border-radius: 10px;
-    padding: 16px;
-  }
-
   .doctors__picture {
     max-height: 250px;
     min-height: 250px;
 
     & img {
       max-height: 250px;
-      border-radius: 10px;
       min-height: 250px;
     }
   }
@@ -588,53 +252,34 @@
   }
 }
 
-@media (max-width: 1223px) {
-  .doctors-main__inner {
-    gap: 16px;
 
-    & > * {
-      flex-basis: calc(50% - 8px);
-    }
-  }
-
-  .doctors__picture.doctors-main__picture {
-    max-height: 350px;
-    min-height: 350px;
-    margin-bottom: 16px;
-    & img {
-      max-height: 350px;
-      min-height: 350px;
-    }
-  }
-
-  .doctors__name.doctors-main__name {
-    min-height: fit-content;
-    font-size: 24px;
-    margin-bottom: 16px;
-  }
+/* doctor-detail */
+.doctor-detail__intro {
+  display: flex;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 1223px) {
-  .doctors-main__inner {
-    gap: 12px;
+.doctor-detail__card {
+  width: 100%;
+  max-width: 427px;
+  flex-shrink: 0;
+  position: relative;
+}
 
-    & > * {
-      flex-basis: 100%;
-    }
-  }
+.doctor-detail__picture {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-height: 427px;
 
-  .doctors__picture.doctors-main__picture {
-    max-height: 250px;
-    min-height: 250px;
-    margin-bottom: 16px;
-    & img {
-      max-height: 250px;
-      min-height: 250px;
-    }
-  }
-
-  .doctors__name.doctors-main__name {
-    font-size: 20px;
-    margin-bottom: 12px;
+  & img {
+    height: 100%;
+    object-fit: cover;
   }
 }
