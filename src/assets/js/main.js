@@ -247,6 +247,23 @@ popupOpenBtns.forEach(function (el) {
                     originaTitle.innerHTML = originalTitlePopup2;
                 }
             }
+            if (currentPopup.getAttribute('data-target') === 'popup-reviews') {
+                const reviewCard = el.closest('.reviews__item');
+                if (reviewCard) {
+                    const picSrc = currentPopup.querySelector('.popup-reviews__picture');
+                    const nameEl = currentPopup.querySelector('.popup-reviews__name');
+                    const ratingEl = currentPopup.querySelector('.popup-reviews__raiting');
+                    const textEl = currentPopup.querySelector('.popup-reviews__text');
+                    const cardPic = reviewCard.querySelector('.reviews__picture');
+                    const cardName = reviewCard.querySelector('.reviews__name');
+                    const cardRating = reviewCard.querySelector('.reviews__raiting');
+                    const cardText = reviewCard.querySelector('.reviews__text');
+                    if (picSrc && cardPic) picSrc.innerHTML = cardPic.innerHTML;
+                    if (nameEl && cardName) nameEl.textContent = cardName.textContent;
+                    if (ratingEl && cardRating) ratingEl.innerHTML = cardRating.innerHTML;
+                    if (textEl && cardText) textEl.innerHTML = cardText.innerHTML;
+                }
+            }
             scrollWidthFunc();
             document.querySelector('html').classList.add('lock');
         }
@@ -824,6 +841,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+
+    const select1 = new ItcCustomSelect('#select-1');
 
     // footer nav panel
 

@@ -46,14 +46,14 @@
 .title-h4 .navigation__link,
 .title-h5 .navigation__link,
 .title-h6 .navigation__link {
-  padding-left: 35px;
+  padding-left: 15px;
   font-weight: 400;
 
   &:after {
     content: '●';
     position: absolute;
-    left: 20px;
-    top: 3px;
+    left: 0;
+    top: 2px;
     font-size: 13px;
     color: $primary;
 
@@ -64,12 +64,13 @@
 /* Navigation  media */
 
 @media (max-width: 1024px) {
-  .navigation__wrap {
-    flex-basis: calc(60% - 24px);
-  }
   .navigation__title {
     margin-bottom: 16px;
-    font-size: 20px;
+    font-size: 22px;
+  }
+
+  .navigation__inner {
+    padding: 30px;
   }
 }
 
@@ -81,9 +82,12 @@
   .navigation__inner {
     flex-direction: column;
     gap: 16px;
+    padding: 20px;
   }
 
   .navigation__title {
-    font-size: 18px;
+    font-size: 20px;
   }
+
+  
 }

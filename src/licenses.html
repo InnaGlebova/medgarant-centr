@@ -1,99 +1,139 @@
-<div class="decor-bg">
+<div class="container">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+            <li><a href="/">Главная</a></li>
+            <li>Клиника</li>
+            <li>Лицензии</li>
+        </ul>
+    </div>
+</div>
+
+<div class="licenses-main section-pt section-pb">
     <div class="container">
-        <div class="breadcrumbs">
-            <ul class="breadcrumbs__list">
-                <li><a href="/">Главная</a></li>
-                <li>Лицензии и сертификаты</li>
-            </ul>
+        <div class="text__content">
+            <h1 class="section-title"><span>Лицензии </span>и сертификаты</h1>
+            <div class="section-descr main-page__descr">
+                <p><strong>Наркологическая клиника «МедГарант»</strong> осуществляет свою деятельность в строгом
+                    соответствии с законодательством Российской Федерации и нормативными актами Министерства
+                    здравоохранения.</p>
+                <p>Мы обладаем полным пакетом разрешительной документации на оказание специализированной медицинской
+                    помощи по профилям «Психиатрия-наркология», «Анестезиология-реаниматология» и «Психотерапия».</p>
+                <p>Наши врачи регулярно проходят курсы повышения квалификации и имеют действующие сертификаты
+                    специалистов. Вы можете быть уверены в легальности оказываемых услуг, безопасности используемых
+                    препаратов и методик лечения.</p>
+                <p>Вся документация доступна для ознакомления в уголке потребителя в здании клиники.</p>
+            </div>
         </div>
     </div>
+</div>
 
-    {{> licenses }}
-
-    <section class="form-main section-offset animation-item transform-item animation">
-        <div class="container">
-            <div class="form-main__inner form-main__inner-4">
-                <form class="form form-main__form">
-                    <h2 class="section-title form-main__title">Не откладывайте на потом</h2>
-                    <p class="form-main__descr">Осложнения от запущенных болезней приводят к смерти</p>
-                    <a class="phone-blue form-main__phone" href="tel:+78889999999">8 (888) 999-99-99</a>
-                    <div class="form__input-wrap">
-                        <input type="text" placeholder="Ваше имя" class="form__input form-main__input" required>
-                        <label class="form__label form__label-phone">
-                            <input type="tel" placeholder="+7(___)___-__-__"
-                                class="form__input form__input-phone form-main__input" required>
-                        </label>
-                    </div>
-                    <div class="select-menu__wrap">
-                        <div class="select-menu">
-                            <div class="select-btn">
-                                <span class="select-btn__text">Как давно появилась проблема</span>
-                                <picture class="select-arrow">
-                                    <source srcset="assets/img/icons/arrow-primary.svg" type="image/svg+xml" />
-                                    <img src="assets/img/icons/arrow-primary.png" alt="arrow" />
-                                </picture>
-                            </div>
-                            <ul class="options">
-                                <li class="option">
-                                    <span class="option-text">Королькова Ольга Николаевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Муравьёва Дарья Григорьевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Ткаченко Анна Ярославовна</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="select-menu">
-                            <div class="select-btn">
-                                <span class="select-btn__text">Возраст пациента</span>
-                                <picture class="select-arrow">
-                                    <source srcset="assets/img/icons/arrow-primary.svg" type="image/svg+xml" />
-                                    <img src="assets/img/icons/arrow-primary.png" alt="arrow" />
-                                </picture>
-                            </div>
-                            <ul class="options">
-                                <li class="option">
-                                    <span class="option-text">Королькова Ольга Николаевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Муравьёва Дарья Григорьевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Ткаченко Анна Ярославовна</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="select-menu">
-                            <div class="select-btn">
-                                <span class="select-btn__text">Хронические заболевания</span>
-                                <picture class="select-arrow">
-                                    <source srcset="assets/img/icons/arrow-primary.svg" type="image/svg+xml" />
-                                    <img src="assets/img/icons/arrow-primary.png" alt="arrow" />
-                                </picture>
-                            </div>
-                            <ul class="options">
-                                <li class="option">
-                                    <span class="option-text">Королькова Ольга Николаевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Муравьёва Дарья Григорьевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Ткаченко Анна Ярославовна</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button type="submit" class="standart-btn primary-btn form__btn form-main__form-btn">Заказать
-                        звонок</button>
-                    <p class="form__politic">*Передавая информацию сайту, Вы принимаете условия политики защиты <a
-                            href="#">персональной информации</a></p>
+<section class="form-block form-block--blue section-offset">
+    <div class="container">
+        <div class="form-block__inner">
+            <picture class="form-block__picture">
+                <source srcset="assets/img/form/form-pic-blue.webp" type="image/webp">
+                <img src="assets/img/form/form-pic-blue.jpg" alt="Консультация">
+            </picture>
+            <div class="form-block__content">
+                <h2 class="form-block__title">Не знаете с чего начать?</h2>
+                <div class="form-block__descr">
+                    <p>Напишите нам — мы подскажем, как действовать в вашей ситуации.</p>
+                    <p>Это анонимно. Мы не будем давить или навязывать услуги.</p>
+                </div>
+                <form class="form form-block__form">
+                    <input type="text" placeholder="Ваше имя*" class="form__input form-block__input" required>
+                    <input type="tel" placeholder="Ваш телефон*" class="form__input form-block__input" required>
+                    <button type="submit" class="standart-btn tertiary-btn form__btn form-block__btn">Помогите
+                        мне</button>
+                    <label class="form-block__checkbox">
+                        <input type="checkbox" class="form-block__checkbox-input" checked required>
+                        <span class="form-block__checkbox-custom"></span>
+                        <span class="form-block__checkbox-text">Отправляя заявку, вы соглашаетесь с <a
+                                href="#">политикой конфиденциальности</a>.</span>
+                    </label>
                 </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    {{> contacts}}
-</div>
+<section class="licenses-main section-pt section-pb">
+    <div class="container">
+        <div class="licenses-main__inner">
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+            <a href="assets/img/licenses/1.webp" data-fancybox="licenses" class="swiper-slide licenses__item">
+                <picture class="item__picture zoom">
+                    <source srcset="assets/img/licenses/1.webp" type="image/webp">
+                    <img src="assets/img/licenses/1.jpg" alt="Лицензия на медицинскую деятельность">
+                </picture>
+            </a>
+        </div>
+    </div>
+</section>
+
+{{> contacts}}

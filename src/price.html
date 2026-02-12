@@ -1,99 +1,525 @@
-<div class="decor-bg">
+<div class="container">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+            <li><a href="/">Главная</a></li>
+            <li>Клиника</li>
+            <li>Цены</li>
+        </ul>
+    </div>
+</div>
+
+<div class="price-main section-pt section-pb">
     <div class="container">
-        <div class="breadcrumbs">
-            <ul class="breadcrumbs__list">
-                <li><a href="/">Главная</a></li>
-                <li>Цены</li>
+        <div class="text__content">
+            <h1 class="section-title"><span>Цены </span>на услуги клиники</h1>
+            <div class="section-descr main-page__descr">
+                <p><strong>Честная ценовая политика</strong> — наш принцип. Мы не навязываем скрытых услуг. Стоимость,
+                    озвученная оператором по телефону, является окончательной.</p>
+                <p>Стационар разделен на несколько зон: приемное отделение, процедурные кабинеты, зона отдыха и палаты различного уровня комфортности (Стандарт, Комфорт, VIP).</p>
+            </div>
+            <ul>
+                <li>
+                    <p>Возможна оплата картой, наличными или переводом</p>
+                </li>
+                <li>
+                    <p>Предоставляем документы для налогового вычета</p>
+                </li>
+                <li>
+                    <p>Предоставляем документы для налогового вычета</p>
+                </li>
             </ul>
         </div>
     </div>
+</div>
 
-    {{> price }}
-
-    <section class="form-main section-offset animation-item transform-item animation">
-        <div class="container">
-            <div class="form-main__inner form-main__inner-4">
-                <form class="form form-main__form">
-                    <h2 class="section-title form-main__title">Не откладывайте на потом</h2>
-                    <p class="form-main__descr">Осложнения от запущенных болезней приводят к смерти</p>
-                    <a class="phone-blue form-main__phone" href="tel:+78889999999">8 (888) 999-99-99</a>
-                    <div class="form__input-wrap">
-                        <input type="text" placeholder="Ваше имя" class="form__input form-main__input" required>
-                        <label class="form__label form__label-phone">
-                            <input type="tel" placeholder="+7(___)___-__-__"
-                                class="form__input form__input-phone form-main__input" required>
-                        </label>
-                    </div>
-                    <div class="select-menu__wrap">
-                        <div class="select-menu">
-                            <div class="select-btn">
-                                <span class="select-btn__text">Как давно появилась проблема</span>
-                                <picture class="select-arrow">
-                                    <source srcset="assets/img/icons/arrow-primary.svg" type="image/svg+xml" />
-                                    <img src="assets/img/icons/arrow-primary.png" alt="arrow" />
-                                </picture>
-                            </div>
-                            <ul class="options">
-                                <li class="option">
-                                    <span class="option-text">Королькова Ольга Николаевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Муравьёва Дарья Григорьевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Ткаченко Анна Ярославовна</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="select-menu">
-                            <div class="select-btn">
-                                <span class="select-btn__text">Возраст пациента</span>
-                                <picture class="select-arrow">
-                                    <source srcset="assets/img/icons/arrow-primary.svg" type="image/svg+xml" />
-                                    <img src="assets/img/icons/arrow-primary.png" alt="arrow" />
-                                </picture>
-                            </div>
-                            <ul class="options">
-                                <li class="option">
-                                    <span class="option-text">Королькова Ольга Николаевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Муравьёва Дарья Григорьевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Ткаченко Анна Ярославовна</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="select-menu">
-                            <div class="select-btn">
-                                <span class="select-btn__text">Хронические заболевания</span>
-                                <picture class="select-arrow">
-                                    <source srcset="assets/img/icons/arrow-primary.svg" type="image/svg+xml" />
-                                    <img src="assets/img/icons/arrow-primary.png" alt="arrow" />
-                                </picture>
-                            </div>
-                            <ul class="options">
-                                <li class="option">
-                                    <span class="option-text">Королькова Ольга Николаевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Муравьёва Дарья Григорьевна</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Ткаченко Анна Ярославовна</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button type="submit" class="standart-btn primary-btn form__btn form-main__form-btn">Заказать
-                        звонок</button>
-                    <p class="form__politic">*Передавая информацию сайту, Вы принимаете условия политики защиты <a
-                            href="#">персональной информации</a></p>
+<section class="form-block form-block--blue">
+    <div class="container">
+        <div class="form-block__inner">
+            <picture class="form-block__picture">
+                <source srcset="assets/img/form/form-pic-blue.webp" type="image/webp">
+                <img src="assets/img/form/form-pic-blue.jpg" alt="Консультация">
+            </picture>
+            <div class="form-block__content">
+                <h2 class="form-block__title">Не знаете с чего начать?</h2>
+                <div class="form-block__descr">
+                    <p>Напишите нам — мы подскажем, как действовать в вашей ситуации.</p>
+                    <p>Это анонимно. Мы не будем давить или навязывать услуги.</p>
+                </div>
+                <form class="form form-block__form">
+                    <input type="text" placeholder="Ваше имя*" class="form__input form-block__input" required>
+                    <input type="tel" placeholder="Ваш телефон*" class="form__input form-block__input" required>
+                    <button type="submit" class="standart-btn tertiary-btn form__btn form-block__btn">Помогите мне</button>
+                    <label class="form-block__checkbox">
+                        <input type="checkbox" class="form-block__checkbox-input" checked required>
+                        <span class="form-block__checkbox-custom"></span>
+                        <span class="form-block__checkbox-text">Отправляя заявку, вы соглашаетесь с <a
+                                href="#">политикой конфиденциальности</a>.</span>
+                    </label>
                 </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    {{> contacts}}
-</div>
+<section class="price section-pt section-pb tabs-container">
+    <div class="container">
+        <div class="price__main-inner">
+            <div class="tabs__inner price__tabs__inner">
+                <div class="price__tabs tabs tabs-mobile">
+                    <button class="tabs__active price__tabs__active standart-btn">
+                        <p class="tabs__active-text">Срочная наркологическая помощь</p>
+                    </button>
+                    <div class="price__tabs__container tabs__container">
+                        <div class="price__tabs__content tabs__content">
+                            <div class="tabs__wrapper price__tabs__wrapper">
+                                <button class="tabs__close">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 1L1 17" stroke="#B0BBCE" stroke-width="1.5"></path>
+                                        <path d="M17 17L1 1" stroke="#B0BBCE" stroke-width="1.5"></path>
+                                    </svg>
+                                </button>
+                                <button class="active price__tab tab">Срочная наркологическая помощь</button>
+                                <button class="price__tab tab">Кодирование</button>
+                                <button class="price__tab tab">Лечение зависимости</button>
+                                <button class="price__tab tab">Социальная адаптация</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price__wrapper tab-content__wrapper">
+                    <div class="tab-content active price__content">
+                        <div class="tab-content__title">Прокапаться или Кодировка - Дома</div>
+                        <table class="price__table">
+                            <tbody class="price__content">
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item  change__item-title">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="tab-content__title">Лечение в клинике - Стационаре (в сутки)</div>
+                        <table class="price__table">
+                            <tbody class="price__content">
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item  change__item-title">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-content price__content">
+                        <div class="tab-content__title">Лечение в клинике - Стационаре (в сутки)</div>
+                        <table class="price__table">
+                            <tbody class="price__content">
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item  change__item-title">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="tab-content__title">Прокапаться или Кодировка - Дома</div>
+                        <table class="price__table">
+                            <tbody class="price__content">
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item  change__item-title">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-content price__content">
+                        <div class="tab-content__title">Прокапаться или Кодировка - Дома</div>
+                        <table class="price__table">
+                            <tbody class="price__content">
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item  change__item-title">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="tab-content__title">Лечение в клинике - Стационаре (в сутки)</div>
+                        <table class="price__table">
+                            <tbody class="price__content">
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item  change__item-title">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-content price__content">
+                        <div class="tab-content__title">Лечение в клинике - Стационаре (в сутки)</div>
+                        <table class="price__table">
+                            <tbody class="price__content">
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item  change__item-title">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="tab-content__title">Прокапаться или Кодировка - Дома</div>
+                        <table class="price__table">
+                            <tbody class="price__content">
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item change__item-title change-item">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="price__item  change__item-title">
+                                    <td class="price__name current-title change-item__title">Курс лечения «Базовый»</td>
+                                    <td class="price__cost">
+                                        от 1600 ₽
+                                    </td>
+                                    <td class="price__btn">
+                                        <button
+                                            class="standart-btn primary-btn popup-btn price__cost-btn change-item__btn"
+                                            data-path="popup-change">
+                                            Заказать
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-methods">
+                <div class="payment-methods__descr">
+                    <p>Мы работаем официально. Оплата производится любым удобным для вас способом после оказания
+                        медицинских услуг.</p>
+                </div>
+                <div class="payment-methods__wrapper">
+                    <div class="payment-methods__title">Принимаем к оплате:</div>
+                    <div class="payment-methods__list">
+                        <div class="payment-methods__item">
+                            <picture class="payment-methods__icon">
+                                <source srcset="assets/img/pay/1.svg" type="image/svg+xml" />
+                                <img src="assets/img/pay/1.png" alt="Наличные" />
+                            </picture>
+                            <span class="payment-methods__label">Наличные</span>
+                        </div>
+
+                        <div class="payment-methods__item">
+                            <picture class="payment-methods__icon">
+                                <source srcset="assets/img/pay/2.svg" type="image/svg+xml" />
+                                <img src="assets/img/pay/2.png" alt="Карты" />
+                            </picture>
+                            <span class="payment-methods__label">Карты</span>
+                        </div>
+
+                        <div class="payment-methods__item">
+                            <picture class="payment-methods__icon">
+                                <source srcset="assets/img/pay/3.svg" type="image/svg+xml" />
+                                <img src="assets/img/pay/3.png" alt="QR-код" />
+                            </picture>
+                            <span class="payment-methods__label">QR-код</span>
+                        </div>
+
+                        <div class="payment-methods__item">
+                            <picture class="payment-methods__icon">
+                                <source srcset="assets/img/pay/4.svg" type="image/svg+xml" />
+                                <img src="assets/img/pay/4.png" alt="Перевод" />
+                            </picture>
+                            <span class="payment-methods__label">Перевод</span>
+                        </div>
+
+                        <div class="payment-methods__item">
+                            <picture class="payment-methods__icon">
+                                <source srcset="assets/img/pay/5.svg" type="image/svg+xml" />
+                                <img src="assets/img/pay/5.png" alt="Рассрочка" />
+                            </picture>
+                            <span class="payment-methods__label">Рассрочка</span>
+                        </div>
+
+                        <div class="payment-methods__item">
+                            <picture class="payment-methods__icon">
+                                <source srcset="assets/img/pay/6.svg" type="image/svg+xml" />
+                                <img src="assets/img/pay/6.png" alt="СБП" />
+                            </picture>
+                            <span class="payment-methods__label">СБП</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="payment-methods__advantages">
+                    <ul>
+                        <li>Заключаем договор</li>
+                        <li>Выдаем кассовый чек</li>
+                        <li>Предоставляем документы для налогового вычета</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> contacts}}

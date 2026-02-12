@@ -641,6 +641,10 @@ button {
   }
 }
 
+.main-page__descr {
+  margin-bottom: 0;
+}
+
 @import "vendor/_header";
 @import "vendor/_swiper";
 @import "vendor/_form";
@@ -668,6 +672,8 @@ button {
 @import "vendor/_treatment";
 @import "vendor/_intro-service";
 @import "vendor/_intro-article";
+@import "vendor/_itc-custom-select";
+@import "vendor/_sitemap";
 
 .rating-area {
   -webkit-box-align: center;
@@ -689,7 +695,8 @@ button {
 }
 
 .rating-area:not(:checked) > label {
-  color: #d0b4fd;
+  color: #f5c54273;
+
   cursor: pointer;
   float: right;
   font-size: 25px;
@@ -714,7 +721,7 @@ button {
 .rating-area > input:checked ~ label:hover,
 .rating-area > input:checked ~ label:hover ~ label,
 .rating-area > label:hover ~ input:checked ~ label {
-  color: #b7141b;
+  color: #f5c542;
 }
 
 .rate-area > label:active {

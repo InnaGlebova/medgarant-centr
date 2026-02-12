@@ -39,7 +39,6 @@
     margin-bottom: 30px;
     font-weight: 800;
     text-transform: uppercase;
-    position: relative;
     padding-bottom: 20px !important;
     margin-bottom: 50px;
 
@@ -113,10 +112,6 @@
 
   p {
     margin-bottom: 16px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 
   & ul {
@@ -124,6 +119,10 @@
     flex-direction: column;
     gap: 16px;
     margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     & li {
       padding-left: 30px;
@@ -156,6 +155,16 @@
       object-fit: cover;
       height: 100%;
     }
+  }
+}
+
+.policy-main__content h2 {
+  margin-bottom: 20px;
+  padding-bottom: 0 !important;
+  position: static;
+
+  &::before {
+    display: none;
   }
 }
 

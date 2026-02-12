@@ -44,3 +44,50 @@
     transform: scaleX(1);
   }
 }
+
+/* licenses-main */
+.licenses-main__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  & > * {
+    flex-basis: calc(16.666% - 16.666px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .licenses-main__inner {
+    & > * {
+      flex-basis: calc(20% - 16px);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .licenses-main__inner {
+    & > * {
+      flex-basis: calc(25% - 15px);
+    }
+  }
+}
+@media (max-width: 900px) {
+  .licenses-main__inner {
+    & > * {
+      flex-basis: calc(33.333% - 13.333px);
+    }
+  }
+}
+@media (max-width: 600px) {
+  .licenses-main__inner {
+    & > * {
+      flex-basis: calc(50% - 10px);
+    }
+  }
+}
+@media (max-width: 400px) {
+  .licenses-main__inner {
+    & > * {
+      flex-basis: 100%;
+    }
+  }
+}
