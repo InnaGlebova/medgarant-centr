@@ -3,6 +3,7 @@ import { html } from "./html.js";
 import { styles, buildCss } from "./styles.js";
 import { scripts } from "./scripts.js";
 import { img } from "./img.js";
+import { favicon } from "./favicon.js";
 import { exportFonts } from "./fonts.js";
 import panini from "panini";
 import browsersync from "browser-sync";
@@ -26,4 +27,5 @@ export function watch() {
   app.gulp.watch(app.path.src.fonts, exportFonts);
   app.gulp.watch(app.path.src.scripts, scripts);
   app.gulp.watch(app.path.src.images, img);
+  app.gulp.watch(`${app.srcFolder}/assets/img/favicon.ico`, favicon);
 }

@@ -842,7 +842,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    const select1 = new ItcCustomSelect('#select-1');
+
+    ItcCustomSelect.create('#select-1');
 
     // footer nav panel
 
@@ -1083,27 +1084,27 @@ searchForms.forEach((form) => {
 // Генерация звезд рейтинга для врачей
 function initDoctorsRating() {
     const ratingBlocks = document.querySelectorAll('.raiting-inner[data-rating]');
-    
+
     ratingBlocks.forEach((block) => {
         const rating = parseFloat(block.getAttribute('data-rating'));
         const starsContainer = block.querySelector('.raiting__stars');
-        
+
         if (!starsContainer) return;
-        
+
         // Очищаем контейнер
         starsContainer.innerHTML = '';
-        
+
         // Генерируем 5 звезд
         // Округляем рейтинг: если дробная часть >= 0.5, округляем вверх, иначе вниз
         const fullStars = Math.round(rating);
-        
+
         for (let i = 0; i < 5; i++) {
             const star = document.createElement('span');
-            
+
             if (i < fullStars) {
                 star.classList.add('active');
             }
-            
+
             starsContainer.appendChild(star);
         }
     });

@@ -21,6 +21,7 @@ import { styles } from "./gulp/tasks/styles.js";
 import { buildCss } from "./gulp/tasks/styles.js";
 import { scripts } from "./gulp/tasks/scripts.js";
 import { img } from "./gulp/tasks/img.js";
+import { favicon } from "./gulp/tasks/favicon.js";
 import { watch } from "./gulp/tasks/watch.js";
 import { cleanFonts } from "./gulp/tasks/clean.js";
 import { otfConvert } from "./gulp/tasks/fonts.js";
@@ -35,7 +36,7 @@ gulp.task(
   gulp.series(
     clean,
     //normilize,
-    gulp.parallel(html, styles, buildCss, scripts, img, webpRun, cleanFonts, otfConvert, ttfConvert, exportFonts),
+    gulp.parallel(html, styles, buildCss, scripts, img, favicon, webpRun, cleanFonts, otfConvert, ttfConvert, exportFonts),
     watch
   )
 );
@@ -46,7 +47,7 @@ gulp.task(
   "build",
   gulp.series(
     clean,
-    gulp.parallel(html, styles, buildCss, scripts, img, webpRun, cleanFonts, otfConvert, ttfConvert, exportFonts)
+    gulp.parallel(html, styles, buildCss, scripts, img, favicon, webpRun, cleanFonts, otfConvert, ttfConvert, exportFonts)
   )
 );
 

@@ -123,7 +123,7 @@
     left: 10px;
     right: 10px;
     bottom: 0;
-    width:  calc(100% - 20px);
+    width: calc(100% - 20px);
   }
 }
 
@@ -146,5 +146,137 @@
 
   .contacts__content {
     padding: 40px 20px;
+  }
+}
+
+/* contacts-main */
+
+.contacts-main__inner {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  max-width: 750px;
+  right: 10px;
+  z-index: 2;
+  margin-left: auto;
+  padding: 40px;
+  z-index: 2;
+
+  & > p {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+
+.contacts-main__wrapper {
+  display: flex;
+  gap: 20px;
+  & > * {
+    flex-basis: calc(50% - 10px);
+  }
+}
+.contacts-main__content {
+  background-color: transparent;
+  border-radius: 0;
+  position: static;
+  max-width: 100%;
+  right: auto;
+  z-index: 2;
+  margin-left: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contacts-main__info {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__info {
+  gap: 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.contacts-main__title {
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.contacts-main__info {
+  flex-grow: 1;
+}
+
+.contacts-main__map {
+  height: 840px;
+}
+
+.contacts-main {
+  height: 840px;
+}
+
+@media (max-width:1400px) {
+  .contacts-main__inner {
+    max-width: calc(100% - 20px);
+    left: 10px;
+    right: 10px;
+    bottom: auto;
+    top: 0;
+    width: calc(100% - 20px);
+
+    
+  & > p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  }
+
+  .contacts-main__map {
+    height: 1200px;
+  }
+  
+  .contacts-main {
+    height: 1200px;
+  }
+}
+
+@media (max-width:768px) {
+
+  .contacts-main__inner {
+    padding: 40px 20px;
+  }
+  .contacts-main__wrapper {
+    flex-wrap: wrap;
+    gap: 10px;
+    &>* {
+      flex-basis: 100%;
+      gap: 10px;
+    }
+  }
+
+  .contacts-main__map {
+    height: 1500px;
+  }
+  
+  .contacts-main {
+    height: 1500px;
+  }
+}
+
+
+@media (max-width:500px) {
+  .contacts-main__map {
+    height: 1700px;
+  }
+  
+  .contacts-main {
+    height: 1700px;
   }
 }

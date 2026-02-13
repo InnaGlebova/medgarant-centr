@@ -12,14 +12,9 @@
 
 .notfound__number {
     font-weight: 800;
-    font-family: $font-number;
-    font-size: 329px;
+    font-size: 250px;
     line-height: 100%;
-
-    & span {
-        color: $primary;
-        line-height: 100%;
-    }
+    color: $primary;
 }
 
 .notfound__content {
