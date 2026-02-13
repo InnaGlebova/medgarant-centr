@@ -230,7 +230,7 @@ popupOpenBtns.forEach(function (el) {
                     if (el.classList.contains('doctors__btn-js')) {
                         let currentItem = el.closest('.change-item');
                         let currentTitile = currentItem.querySelector('.change-item__title');
-                        originaTitle.innerHTML = 'Записаться на приём к врачу: ' + currentTitile.innerHTML
+                        originaTitle.innerHTML = 'Записаться на приём к врачу: <span>' + currentTitile.innerHTML + '</span>'
                     }
                     else {
                         if (el.classList.contains('change-item__btn_current')) {
@@ -271,6 +271,91 @@ popupOpenBtns.forEach(function (el) {
 });
 
 /* end popups */
+
+/* search */
+function search(wrapper) {
+    let inputSearch = wrapper.querySelector(".search-input-js");
+
+    if (inputSearch) {
+        let filter = inputSearch.value.toUpperCase();
+        let items = wrapper.querySelectorAll(".search-item-js");
+        for (let i = 0; i < items.length; i++) {
+            let name = items[i].querySelector(".search-elem-js");
+            if (name.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                items[i].removeAttribute('style');
+            } else {
+                items[i].style.display = "none";
+            }
+        }
+
+    }
+}
+function escapeRegex(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function highlightSearchText(el, filter) {
+    if (!el || !filter) return;
+    let original = el.dataset.originalHtml;
+    if (original === undefined) {
+        el.dataset.originalHtml = el.innerHTML;
+        original = el.innerHTML;
+    }
+    if (filter.length === 0) {
+        el.innerHTML = original;
+        return;
+    }
+    let regex = new RegExp(escapeRegex(filter), 'gi');
+    el.innerHTML = original.replace(regex, '<span class="search__highlight">$&</span>');
+}
+
+const searchs = document.querySelectorAll('.search-js');
+if (searchs.length > 0) {
+    searchs.forEach(wrapper => {
+        let inputSearch = wrapper.querySelector(".search-input-js");
+        if (inputSearch) {
+            let searchEmpty = wrapper.querySelector(".search-empty-js");
+            let searchLatinWarning = wrapper.querySelector(".search-latin-warning-js");
+            let items = wrapper.querySelectorAll(".search-item-js");
+            items.forEach(item => {
+                let name = item.querySelector(".search-elem-js");
+                if (name && name.dataset.originalHtml === undefined) {
+                    name.dataset.originalHtml = name.innerHTML;
+                }
+            });
+            function updateLatinWarning() {
+                if (searchLatinWarning) {
+                    searchLatinWarning.style.display = /[a-zA-Z]/.test(inputSearch.value) ? '' : 'none';
+                }
+            }
+            inputSearch.addEventListener('input', updateLatinWarning);
+            inputSearch.addEventListener('keyup', () => {
+                let value = inputSearch.value;
+                let filter = value.toUpperCase().trim();
+                let filterOriginal = inputSearch.value.trim();
+                let visibleCount = 0;
+                for (let i = 0; i < items.length; i++) {
+                    let name = items[i].querySelector(".search-elem-js");
+                    let textToMatch = name && (name.dataset.originalHtml !== undefined ? name.dataset.originalHtml : name.innerHTML);
+                    let matches = filter.length > 0 && name && textToMatch.toUpperCase().indexOf(filter) > -1;
+                    if (matches) {
+                        items[i].removeAttribute('style');
+                        visibleCount++;
+                        highlightSearchText(name, filterOriginal);
+                    } else {
+                        items[i].style.display = "none";
+                        if (name) highlightSearchText(name, '');
+                    }
+                }
+                if (searchEmpty) {
+                    searchEmpty.style.display = (filter.length > 0 && visibleCount === 0) ? '' : 'none';
+                }
+            });
+        }
+    });
+}
+
+/* search end */
 
 /* tabs */
 class Tabs {

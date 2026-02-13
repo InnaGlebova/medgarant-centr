@@ -1,18 +1,62 @@
 <section class="notfound">
     <div class="container">
         <div class="notfound__inner">
-           
+
             <div class="notfound__content">
                 <p class="notfound__number">404</p>
-                <h1 class="notfound__title section-title">Страница не найдена</h1>
-                <p class="notfound__descr section-descr">Похоже, эта страница была перемещена или удалена.
-                </p>
+                <div class="notfound__content-wrap">
+                    <h1 class="notfound__title section-title">Страница не найдена</h1>
+                    <p class="notfound__descr section-descr">Похоже, эта страница была перемещена или удалена.
+                    </p>
+                </div>
 
             </div>
 
             <div class="notfound__search">
                 <p>Попробуете найти?</p>
-                <form action=""></form>
+                <div class="inner-search header__inner-search search search-js ">
+                    <form class="search__form">
+                      <label class="search__field">
+                        <span class="search__icon" aria-hidden="true">
+                          <img src="assets/img/icons/loupe.svg" alt="" width="20" height="20">
+                        </span>
+                        <input type="text" class="search__input search-input-js" placeholder="Поиск по сайту">
+                      </label>
+                    </form>
+                    <div class="search__wrapper">
+                      <div class="search__empty search-empty-js" style="display: none;">Ничего не найдено...</div>
+                      <p class="search__latin-warning search-latin-warning-js" style="display: none;">Используйте только русские буквы</p>
+                      <div class="search__list">
+                        <ul>
+                          <li style="display: none;" class="search-item-js"> <a class="search-elem-js" href="#">
+                              Кодирование
+                            </a></li>
+                          <li style="display: none;" class="search-item-js"> <a class="search-elem-js" href="#">
+                              Алкоголизм
+                            </a></li>
+                          <li style="display: none;" class="search-item-js"> <a class="search-elem-js" href="#">
+                              Наркомания
+                            </a></li>
+                          <li style="display: none;" class="search-item-js"> <a class="search-elem-js" href="#">
+                              Выывод из запоя
+                            </a></li>
+                          <li style="display: none;" class="search-item-js"> <a class="search-elem-js" href="#">
+                              Психиатрия
+                            </a></li>
+                        </ul>
+                      </div>
+                      <div class="popular-search search-start-hide-js">
+                        <span>Возможно, вас заинтересует</span>
+                        <ul>
+                          <li><a href="#">Лечение ментальных расстройств</a></li>
+                          <li><a href="#">Индивидуальная психотерапия</a></li>
+                          <li><a href="#">Принудительное лечение</a></li>
+                          <li><a href="#">Вызов терапевта на дом</a></li>
+                          <li><a href="#">Психиатрический стационар</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>

@@ -13,11 +13,12 @@
   display: flex;
   flex-direction: column;
   border: 1px solid transparent;
-  transition: border 0.3s linear;
+  transition: border 0.3s linear, background 0.3s linear;
 }
 
 .services__item:hover {
   border-color: $primary;
+  background-color: $tertiary-background;
 }
 
 .services__content {

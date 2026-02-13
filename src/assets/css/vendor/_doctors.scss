@@ -21,24 +21,29 @@
 
 .doctors__descr {
   margin-bottom: 20px;
+  transition: all 0.3s linear;
 }
 
 .doctors__item.swiper-slide-active .doctors__descr,
 .doctors__item.swiper-slide-active .doctors__bottom {
   display: flex;
+  transition: all 0.3s linear;
 }
 
 .doctors .swiper-wrapper {
   align-items: center;
+  transition: all 0.3s linear;
 }
 
 .doctors__title {
   margin-bottom: 50px;
+  transition: all 0.3s linear;
 }
 
 .doctors__picture {
   max-height: 310px;
   position: relative;
+  transition: all 0.3s linear;
 
   & img {
     max-height: 310px;
@@ -58,10 +63,12 @@
   padding: 10px;
   top: 20px;
   left: 20px;
+  transition: all 0.3s linear;
 }
 
 .doctors__content {
   padding: 30px 20px 20px 20px;
+  transition: all 0.3s linear;
 }
 
 .doctors__name {
@@ -69,20 +76,24 @@
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
+  transition: all 0.3s linear;
 }
 
 .doctors__post {
   margin-bottom: 20px;
   font-size: 16px;
+  transition: all 0.3s linear;
 }
 .doctors__bottom {
   margin-bottom: 20px;
+  transition: all 0.3s linear;
 }
 .doctors__actions,
 .doctors__bottom {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  transition: all 0.3s linear;
 
   & > * {
     flex-basis: calc(50% - 5px);
@@ -90,6 +101,7 @@
 }
 .doctors__btn {
   padding: 10px;
+  transition: all 0.3s linear;
 }
 
 .doctors__category,
@@ -100,6 +112,7 @@
   font-size: 12px;
   position: relative;
   padding-left: 35px;
+  transition: all 0.3s linear;
 }
 .doctors__category::before {
   position: absolute;
@@ -127,6 +140,7 @@
 .all-doctors__link {
   max-width: 300px;
   margin: 0 auto;
+  
 }
 .doctors__swiper-inner {
   margin-bottom: 50px;

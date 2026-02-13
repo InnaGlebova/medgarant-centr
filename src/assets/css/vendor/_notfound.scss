@@ -7,7 +7,7 @@
 .notfound__inner {
     display: flex;
     align-items: center;
-    gap: 150px;
+    flex-direction: column;
 }
 
 .notfound__number {
@@ -19,111 +19,48 @@
 
 .notfound__content {
     display: flex;
-    flex-direction: column;
-}
-
-.notfound__title {
-    color: $primary;
-    font-size: 58px;
-    margin-bottom: 24px;
-
-    & span {
-        color: $primary-text;
-    }
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid $primary-stroke;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .notfound__descr {
     margin-bottom: 16px;
 }
 
-.notfound__links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 24px;
-}
-
-.notfound__home-link {
-    max-width: fit-content;
-}
-
-.notfound__link {
-    border-radius: 10px;
-    padding: 8px 16px;
-}
-
-@media (max-width: 1600px) {
-    .notfound__inner {
-        gap: 50px;
+.notfound__search {
+    &>p {
+        text-transform: uppercase;
+        font-weight: 700;
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1024px) {
     .notfound__number {
-        font-size: 250px;
-    }
-
-    .notfound__title {
-        font-size: 48px;
+        font-size: 200px;
     }
 
     .notfound {
         padding: 80px 0;
     }
-}
-
-@media (max-width: 1024px) {
-    .notfound__inner {
+    .notfound__content {
         flex-direction: column;
-    }
-
-    .notfound__content {
-        align-items: center;
         text-align: center;
-        justify-content: center;
     }
 
-    .notfound__links {
-        justify-content: center;
+    .notfound__title::before {
+        left: 50%;
+        transform: translateX(-50%)
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .notfound__number {
-        font-size: 178px;
+        font-size: 150px;
     }
 
-    .notfound__title {
-        font-size: 30px;
-    }
-
-    .notfound {
-        padding: 40px 0;
-    }
-    .notfound__inner {
-        gap: 24px;
-    }
-}
-
-@media (max-width: 500px) {
-    .notfound__content {
-        align-items: flex-start;
-        text-align: left;
-        justify-content: flex-start;
-    }
-
-    .notfound__links {
-        justify-content: flex-start;
-    }
-
-    .notfound__home-link {
-        max-width: 100%;
-        width: 100%;    
-    }
-}
-
-@media (max-width: 360px) {
-    .notfound__number {
-        font-size: 140px;
-    }
 }
